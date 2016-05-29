@@ -21,34 +21,69 @@ of people, we chose to
 [*empathize*](http://www.merriam-webster.com/dictionary/empathize)
 with them using *all* the latest (*ES6*) features is not (*yet*) an option.
 
+## Better Parts
 
-Highlights from Douglas Crockford's "***Better Parts***" Talk:
+_Highlights_ from Douglas Crockford's "***Better Parts***" Talk:  https://youtu.be/bo36MrBfTk4  
+(*first presented at JSConfUY 15th March 2014*)
 
-> "_**The Good Parts** are what's left when you
-**remove all the bad parts**_"
++ "_Programs **must be perfect** or they are **not right**_." -
+ [02:21](https://youtu.be/bo36MrBfTk4?t=2m21s)  
 
-> [07:43](https://youtu.be/bo36MrBfTk4?t=7m43s) -
-"_**This will save you some day**, if you comply with it..._"  
-> [07:47](https://youtu.be/bo36MrBfTk4?t=7m47s) -
-"_It's **not just a matter of opinion**, there is a **good reason for everything** that JSLint asks you to do_"  
-> [07:50](https://youtu.be/bo36MrBfTk4?t=7m50s) -
-"_I'm only **telling you not to use** the tools that are
-**unnecessary and dangerous**_"
-> [08:39](https://youtu.be/bo36MrBfTk4?t=8m39s) -
-"_Eventually, **we want to be writing with one voice**,
++ "_**The Good Parts** are what's left when you
+**remove all the bad parts**_" -
+[02:30](https://youtu.be/bo36MrBfTk4?t=2m30s)  
+
++ "_Criteria for deciding if something is a good part or not is this:
+if a feature is **sometimes useful and sometimes dangerous**,
+and **if there is a better option, always use the better option**_." -
+[02:41](https://youtu.be/bo36MrBfTk4?t=3m41s)
+
++ "_this is maybe the **most important** idea tonight:_  
+_**We are not paid to use every feature of the language**
+we are paid to **write programs that work well** and are
+**free of error**_ -
+[03:10](https://youtu.be/bo36MrBfTk4?t=3m10s)
+
++ "_People don't like **programs with errors** in them
+and they wish we would **stop doing that**_."
+[03:21](https://youtu.be/bo36MrBfTk4?t=3m21s)
+
++ "_Sometimes we work against our own interest,
+in **trying to demonstrate mastery over the language**,
+but we are **actually making things worse not better**_" -
+[03:29](https://youtu.be/bo36MrBfTk4?t=3m29s)
+
++ "_Everybody should learn as many languages as they can,
+because every language will teach you things you can apply
+in other languages_"
+[03:46](https://youtu.be/bo36MrBfTk4?t=3m46s)
+
++ "_**This will save you some day**, if you comply with it..._" -
+[07:47](https://youtu.be/bo36MrBfTk4?t=7m47s)
+
++ "_It's **not just a matter of opinion**, there is a **good reason for everything** that JSLint asks you to do_"
+
++ "_I'm only **telling you not to use** the tools that are
+**unnecessary and dangerous**_" -
+[07:50](https://youtu.be/bo36MrBfTk4?t=7m50s)
+
++ "_Eventually, **we want to be writing with one voice**,
 we want all of the software we develop in a project to
 look as thought it was **developed by the same person**,
-and that person is **really smart**_"  
-> [09:17](https://youtu.be/bo36MrBfTk4?t=9m17s) -
-"_**Keystroking time** is **irrelevant**, so if you're doing
-something stupid to shave keystrokes, that's counter-productive._"  
-> [09:55](https://youtu.be/bo36MrBfTk4?t=9m55s) -
-"_There's a **good reason those features were added
-to the language**.
-I can tell you reliably, **that is absolutely not true**._"  
-> [10:26](https://youtu.be/bo36MrBfTk4?t=10m26s) -
-"_Just because a '**foot gun**' is **in the language**,
-**doesn't mean you want to shoot your foot off**_"
+and that person is **really smart**_" - k
+[08:39](https://youtu.be/bo36MrBfTk4?t=8m39s)
+
++ "_**Keystroking time** is **irrelevant**, so if you're doing
+something stupid to shave keystrokes, that's counter-productive._" -
+[09:17](https://youtu.be/bo36MrBfTk4?t=9m17s)
+
++ "_There's a **good reason those features were added to the language**.
+I can tell you reliably, **that is absolutely not true**._" -
+[09:55](https://youtu.be/bo36MrBfTk4?t=9m55s)
+
++ "_Just because a '**foot gun**' is **in the language**,
+**doesn't mean you want to shoot your foot off**_" -
+[10:26](https://youtu.be/bo36MrBfTk4?t=10m26s)
 
 # [tl;dr](https://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn%27t_read)
 
@@ -61,11 +96,29 @@ which *is* the "*right*" path because there is a lot of
 marketing hype which can easily be mistaken for "fact".
 
 The only way a *beginner* can determine if the source of
-learning is good on recommendation of their peers
-or failing that "*gut feeling*", neither of which are
+learning is any good is by listening to their their peers
+or failing that, "*gut feeling*", neither of which are
 a *reliable* measure of quality.
 
+### Why Should Anyone Listen to Douglas Crockford?
+
+Crockford is the Master Yoda of JavaScript, he has mastered the craft.
+He is a member of "[**TC39**](http://tc39wiki.calculist.org/about/people/)"
+(the ECMAScript Technical Committee) responsible for
+setting the language standard to be implemented by web browser makers;
+to say that DC "*knows*" JavaScript inside-out is an *understatement*.
+He ***invented*** JavaScript Object Notation
+[***JSON***](https://tools.ietf.org/html/rfc7159)
+data format (*the Standard for REST APIs*) and wrote the first parser.
+He painstakingly scoured the entire ECMAScript specification
+in order to compile his list of Good (*and Bad*) Parts,
+a *subset* of the language that can be *trusted* and
+*used reliably anywhere*.
+He has been **lead engineer** at Yahoo and **Paypal** and run his own
+web consulting company specialising in JS applications.
+
 However when you attempt to understand the "*Philosophy*" of
+most
 
 Most people will not look at http://javascript.crockford.com
 and think: "*yes, this looks like the place to learn
@@ -112,7 +165,8 @@ file, so you need to specify your environment e.g:
 https://youtu.be/hQVTIJBZook
 + ***The Better Parts*** - JSConfUY 2014:
 https://youtu.be/bo36MrBfTk4
-
++ Douglas Crockford ***Complete Playlist***:
+https://www.youtube.com/playlist?list=PLEzQf147-uEpvTa1bHDNlxUL2klHUMHJu
 
 ## Background Reading
 
@@ -120,6 +174,8 @@ https://youtu.be/bo36MrBfTk4
 https://www.sitepoint.com/comparison-javascript-linting-tools/
 + The Sorry Legacy of Internet Explorer:
 http://www.wired.com/2016/01/the-sorry-legacy-of-microsoft-internet-explorer/
++ Readability:
+https://www.nngroup.com/articles/legibility-readability-comprehension/
 
 ## Browser Stats *Facts*
 
@@ -171,22 +227,51 @@ then using only the *goodparts* is a good idea.
 
 ### But caniuse.com says ...
 
-Caniuse.com is a *fantastic* website. The UI is brilliant and for "*pub*"
-(*i.e. non-scientific*) discussions about which HTML5 are available in
-different browsers, we use it often! But caniuse.com uses the data from
-[statcounter.com](http://gs.statcounter.com/about) which *good*
-but has *several* flaws in data collection methodology:
+Caniuse.com is a *fantastic* website. The UI is brilliant and for "*informal*"
+(*i.e. non-scientific*) discussions about which HTML5 features are available
+in a browser, we use it often! But caniuse.com bases it's pretty
+graphs on the data from
+[statcounter.com](http://gs.statcounter.com/about) which is *good*
+but has *several* ***flaws in data collection methodology***:
 
-1. Small Sample - StatCounter collects data for a  
-"_network of more than **3 million websites**_"
+1. ***Small sample size*** - StatCounter collects data for a  
+"_network of more than **3 million websites**"
 if you know *anything* about the internet you will realize that this
-is less than % of websites on the internet.
-According to [netcraft.com](http://news.netcraft.com/) there are over
-a 100 Million (*active*) websites online in May 2016
-counts *all* page views which means
-that *heavy* users
+is a drop in the ocean.
+3M sites is less than 0.3% of websites on the internet<sup>1</sup>.
 
-> "*StatCounter
+2. ***Over counting*** - StatCounter counts *all* page views made by
+a given user (agent) which means that *heavy* users have higher
+representation in the sample.
+(_If the website does not **work** on a given browser/device
+  the person will **obviously** not get past the first page!_)
+By contrast NetMarketShare only counts the *first* pageview
+which means it gives an _**equal weighting to each visitor**_.
+
+<sup>1</sup>According to [netcraft.com](http://news.netcraft.com/)
+there are over a ***billion*** (*active*) websites online in May 2016.
+It is *unclear* which websites StatCounter is sourcing its data from,
+please don't take their usage tables as "*gospel*" because they are flawed.
+
+### Wikipedia as a *Representative* Sample of all Web Traffic
+
+If you want a *representative* sample of all internet users,
+you cannot do better than Wikipedia which has content for almost *everyone*
+and does its data-collection server-side (*so users without JavaScript
+  or those who have JS disabled are still counted*)
+
+| Browser / Version   | Vistors |
+|:--------------------|--------:|
+| Internet Explorer 7 | 1.65%   |
+| Internet Explorer 8 | 1.31%   |
+| Internet Explorer 9 | 1.28%   |
+| Total Legacy IE     | 4.24%   |
+
+
+> See:
+> https://stats.wikimedia.org/wikimedia/squids/SquidReportClients.htm  
+> https://analytics.wikimedia.org/dashboards/browsers/#all-sites-by-browser
+
 
 If you want to dive a bit deeper into the methodology used by StatCounter see:
 http://www.zdnet.com/article/net-market-share-vs-statcounter-whose-online-measurements-can-you-trust/
