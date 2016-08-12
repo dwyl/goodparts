@@ -10,11 +10,14 @@ The ***guiding principal*** is:
 
 The 3 biggest advantages of using `goodparts` in your code:
 
-1. [***Readability***](https://en.wikipedia.org/wiki/Readability) - fewer (JS) language features means
+1. [***Readability***](https://en.wikipedia.org/wiki/Readability) - using _fewer_ ECMAScript (JS) language features means
 people reading your code can get to the heart of what it *does*
 rather than waste time trying to understand
 how its been written.
-2. ***Inclusiveness*** -
+2. [***Shoshin***](https://en.wikipedia.org/wiki/Shoshin) - using _fewer_ JS features
+also means a _complete_ beginner has _less_ to learn before
+they _understand_ your code. This is _essential_ in Open Source
+if you want to make something that _anyone_ can use/modify/extend.
 3. [***Portability***](https://en.wikipedia.org/wiki/Software_portability) -
 "Old" Browsers/Devices are a fact, even if it's "*only a small percentage*"
 of people, we chose to
@@ -53,10 +56,12 @@ in **trying to demonstrate mastery over the language**,
 but we are **actually making things worse not better**_" -
 [03:29](https://youtu.be/bo36MrBfTk4?t=3m29s)
 
+<!--- commenting out as not strictly relevant to JS
 + "_Everybody should learn as many languages as they can,
 because every language will teach you things you can apply
 in other languages_"
 [03:46](https://youtu.be/bo36MrBfTk4?t=3m46s)
+-->
 
 + "_**This will save you some day**, if you comply with it..._" -
 [07:47](https://youtu.be/bo36MrBfTk4?t=7m47s)
