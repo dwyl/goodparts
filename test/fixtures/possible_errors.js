@@ -1,3 +1,5 @@
 var read = require('../read.js');
 
-module.exports = {};
+module.exports = {
+  "no-console": null
+};
