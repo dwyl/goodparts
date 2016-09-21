@@ -1,18 +1,15 @@
-var fs = require('fs');
-var path = require('path');
+var bestPractices = require('./best_practices');
+var nodeCommonJs = require('./node_common_js');
+var possibleErrors = require('./possible_errors');
+var strict = require('./strict');
+var stylisticIssues = require('./stylistic_issues');
+var variables = require('./variables');
 
-function read (filename) {
-  return fs.readFileSync(path.join(__dirname, filename + '.js'), 'utf-8');
-}
-
-module.exports = {
-  'max-len': {
-    fail: [read('max-len.fail')],
-    pass: ['aaaaaa']
-  },
-  'space-infix-ops': {
-    fail: ['var a = 1+ 2;'],
-    pass: ['var a = 1 + 2;']
-  },
-  'jacks-rule' : null
-}
+module.exports = Object.assign({},
+  bestPractices,
+  nodeCommonJs,
+  possibleErrors,
+  strict,
+  stylisticIssues,
+  variables
+);
