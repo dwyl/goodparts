@@ -3,9 +3,8 @@ var eslint = require('eslint');
 var allRules = require('eslint/conf/eslint-all.js').rules;
 
 var testObject = require('./fixtures/');
-var config = require('../eslintrc.js');
+var ourRules = require('../rules');
 
-var ourRules = config.rules;
 var linter = eslint.linter;
 
 function passesRule (rule, text) {
