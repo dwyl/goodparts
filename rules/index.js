@@ -1,8 +1,8 @@
-var bestPractices = require('./best-practices');
-var nodeCommonJs = require('./node-common-js');
-var possibleErrors = require('./possible-errors');
+var bestPractices = require('./best_practices');
+var nodeCommonJs = require('./node_common_js');
+var possibleErrors = require('./possible_errors');
 var strict = require('./strict');
-var stylisticIssues = require('./stylistic-issues');
+var stylisticIssues = require('./stylistic_issues');
 var variables = require('./variables');
 
 module.exports = Object.assign({},
