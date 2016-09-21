@@ -1,15 +1,17 @@
 var test = require('tape');
 var eslint = require('eslint');
+var allRules = require('eslint/conf/eslint-all.js').rules;
 
-var testObject = require('./test_object.js');
+var testObject = require('./fixtures/');
 var config = require('../eslintrc.js');
 
+var ourRules = config.rules;
 var linter = eslint.linter;
 
 function passesRule (rule, text) {
   var rules = {};
 
-  rules[rule] = config.rules[rule];
+  rules[rule] = ourRules[rule];
 
   return linter.verify(text, { rules: rules }).length === 0;
 }
@@ -18,11 +20,18 @@ function ruleNotSet (rule) {
   return [undefined, 0, 'off'].indexOf(config.rules[rule]) > -1;
 }
 
-test('rule runner', function (t) {
-  Object.keys(testObject).forEach(function (rule) {
-    if (!testObject[rule]) {
-      t.ok(ruleNotSet, rule + ' not configured');
-      return;
+function ruleNotConfigured (rule) {
+  return ourRules[rule] === undefined;
+}
+
+test('Testing All Conifgurable Rules', function (t) {
+  Object.keys(allRules).forEach(function (rule) {
+    if (ruleNotConfigured(rule)) {
+      return t.fail(rule + ' not configured');
+    }
+
+    if (testObject[rule] === null) {
+      return t.ok(ruleNotSet, rule + ' not configured');
     }
 
     testObject[rule].fail.forEach(function (text) {
