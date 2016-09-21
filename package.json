@@ -3,7 +3,7 @@
   "description": "An ESLint Style that only allows JavaScript the Good Parts (and \"Better Parts\") in your codebase.",
   "version": "0.0.1",
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "tape test/*.test.js"
   },
   "devDependencies": {
     "eslint": "^3.5.0",
