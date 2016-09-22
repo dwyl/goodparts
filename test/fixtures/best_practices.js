@@ -6,4 +6,7 @@ module.exports = {
   'consistent-return': { fail: ['function f(c) { if (c) { return true; } }'] },
   'default-case': { fail: ['switch (a) { case 1: break; }'] },
   'dot-notation': { fail: ['var x; var y = x[\'key\'];'] },
+  'no-caller': {
+    fail: ['[1].map(function(n) { return arguments.callee(n - 1);});']
+  },
 };
