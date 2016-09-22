@@ -19,4 +19,5 @@ module.exports = {
   'no-magic-numbers': 'off', // https://github.com/dwyl/goodparts/issues/92
   'no-multi-str': 'error', // https://github.com/dwyl/goodparts/issues/93
   'no-new-wrappers': 'error', // https://github.com/dwyl/goodparts/issues/94
+  'no-octal-escape': 'error' // https://github.com/dwyl/goodparts/issues/96
 };

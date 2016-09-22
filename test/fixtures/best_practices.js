@@ -23,4 +23,5 @@ module.exports = {
   'no-magic-numbers': null,
   'no-multi-str': { fail: ['test\\\ncase'] },
   'no-new-wrappers': { fail: ['var s = new String("cheese");'] },
+  'no-octal-escape': { fail: ['var foo = "Copyright \\251"'] },
 };
