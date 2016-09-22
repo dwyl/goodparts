@@ -10,4 +10,5 @@ module.exports = {
     fail: ['[1].map(function(n) { return arguments.callee(n - 1);});']
   },
   'guard-for-in': null,
+  'no-div-regex': { fail: 'function bar() { return /=foo/; }' },
 };
