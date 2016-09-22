@@ -46,4 +46,18 @@ module.exports = {
     fail: [read('eol.fail')],
     pass: [read('eol.pass')]
   },
+  'func-call-spacing': {
+    fail: ['fn ();'],
+    pass: ['fn();']
+  },
+  'func-names': null,
+  'func-style': null,
+  'id-blacklist': null,
+  'id-length': null,
+  'id-match': null,
+  'indent': {
+    fail: [read('ident.fail')],
+    pass: [read('ident.pass')]
+  },
+  'jsx-quotes': null
 };
