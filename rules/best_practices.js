@@ -13,4 +13,5 @@ module.exports = {
   'no-extra-label': 'error', // https://github.com/dwyl/goodparts/issues/80
   'no-floating-decimal': 'error', // https://github.com/dwyl/goodparts/issues/81
   'no-implicit-coercion': 'error', // https://github.com/dwyl/goodparts/issues/82
+  'no-implied-eval': 'error', // https://github.com/dwyl/goodparts/issues/83
 };
