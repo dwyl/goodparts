@@ -15,4 +15,5 @@ module.exports = {
   'no-implicit-coercion': 'error', // https://github.com/dwyl/goodparts/issues/82
   'no-implied-eval': 'error', // https://github.com/dwyl/goodparts/issues/83
   'no-iterator': 'error', // https://github.com/dwyl/goodparts/issues/84
+  'no-lone-blocks': 'error', // https://github.com/dwyl/goodparts/issues/91
 };

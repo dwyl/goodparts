@@ -19,4 +19,5 @@ module.exports = {
   'no-implicit-coercion': { fail: ['var x = !!1;'] },
   'no-implied-eval': { fail: ['setTimeout("alert(\'Hi!\');", 100);'] },
   'no-iterator': { fail: ['foo.__iterator__ = function () {};'] },
+  'no-lone-blocks': { fail: ['{}'] },
 };
