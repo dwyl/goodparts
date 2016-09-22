@@ -14,4 +14,5 @@ module.exports = {
   'no-unexpected-multiline': 'error', //https://github.com/dwyl/goodparts/issues/46
   'no-unsafe-finally': 'error', //https://github.com/dwyl/goodparts/issues/47
   'use-isnan': 'error', // https://github.com/dwyl/goodparts/issues/48
+  'valid-typeof': ['error', { 'requireStringLiterals': true }], // https://github.com/dwyl/goodparts/issues/52
 };

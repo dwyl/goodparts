@@ -19,4 +19,5 @@ module.exports = {
   'no-unexpected-multiline': { fail: ['var foo = bar\n(1 || 2).baz();'] },
   'no-unsafe-finally': { fail: [read('no-unsafe-finally.fail')] },
   'use-isnan': { fail: ['if (NaN == x) { x = 0; }'] },
+  'valid-typeof': { fail: ['var x; if (typeof x == "jack") { x = "OMG"} '] }
 };
