@@ -34,4 +34,5 @@ module.exports = {
   'no-unused-expressions': { fail: ['0;'] },
   'no-useless-call': { fail: ['foo.call(null, 1, 2, 3);'] },
   'no-useless-escape': { fail: ['"\\a";'] },
+  'no-warning-comments': null,
 };
