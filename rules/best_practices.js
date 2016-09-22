@@ -28,4 +28,5 @@ module.exports = {
   'no-useless-call': 'error', // https://github.com/dwyl/goodparts/issues/114
   'no-useless-escape': 'error', // https://github.com/dwyl/goodparts/issues/116
   'no-warning-comments': 'off', // https://github.com/dwyl/goodparts/issues/117
+  'radix': ['error', 'always'], // https://github.com/dwyl/goodparts/issues/118
 };

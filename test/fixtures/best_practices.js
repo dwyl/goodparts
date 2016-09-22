@@ -35,4 +35,5 @@ module.exports = {
   'no-useless-call': { fail: ['foo.call(null, 1, 2, 3);'] },
   'no-useless-escape': { fail: ['"\\a";'] },
   'no-warning-comments': null,
+  'radix': { fail: ['var num = parseInt("071'] },
 };
