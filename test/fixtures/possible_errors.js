@@ -7,5 +7,9 @@ module.exports = {
   'no-empty-character-class': { fail: ['/^abc[]/.test("abcdefg");'] },
   'no-ex-assign': { fail: ['try { var x; } catch (e) { e = 10; }'] },
   'no-extra-parens': null,
-  'no-extra-semi': { fail: ['var x;;'] }
+  'no-extra-semi': { fail: ['var x;;'] },
+  'no-inner-declarations': { fail: [
+    'if (test) {function func () { return; }}',
+    'if (test) { var x; }'
+  ] }
 };
