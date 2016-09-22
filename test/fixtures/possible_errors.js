@@ -17,5 +17,6 @@ module.exports = {
   'no-prototype-builtins': null,
   'no-sparse-arrays': { fail: ['[1, ,3]'] },
   'no-unexpected-multiline': { fail: ['var foo = bar\n(1 || 2).baz();'] },
-  'no-unsafe-finally': { fail: [read('no-unsafe-finally.fail')] }
+  'no-unsafe-finally': { fail: [read('no-unsafe-finally.fail')] },
+  'use-isnan': { fail: ['if (NaN == x) { x = 0; }'] },
 };
