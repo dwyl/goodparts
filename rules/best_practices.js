@@ -11,4 +11,5 @@ module.exports = {
   'no-eq-null': 'error', // https://github.com/dwyl/goodparts/issues/75
   'no-extend-native': 'error', // https://github.com/dwyl/goodparts/issues/77
   'no-extra-label': 'error', // https://github.com/dwyl/goodparts/issues/80
+  'no-floating-decimal': 'error', // https://github.com/dwyl/goodparts/issues/81
 };

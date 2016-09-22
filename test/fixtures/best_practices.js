@@ -15,4 +15,5 @@ module.exports = {
   'no-eq-null': { fail: ['var x; x = val == null;'] },
   'no-extend-native': { fail: ['Object.prototype.a = "a";'] },
   'no-extra-label': { fail: ['A: while (a) {break A;}'] },
+  'no-floating-decimal': { fail: ['var x = .5;'] },
 };
