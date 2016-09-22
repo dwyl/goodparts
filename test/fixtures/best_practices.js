@@ -12,4 +12,5 @@ module.exports = {
   'guard-for-in': null,
   'no-div-regex': { fail: 'function bar() { return /=foo/; }' },
   'no-empty-function': { fail: 'function foo() {}' },
+  'no-eq-null': { fail: 'var x; x = val == null;' },
 };
