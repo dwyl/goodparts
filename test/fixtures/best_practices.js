@@ -33,4 +33,5 @@ module.exports = {
   'no-self-compare': { fail: ['var x = 10; if (x === x) { x = 20; };'] },
   'no-unused-expressions': { fail: ['0;'] },
   'no-useless-call': { fail: ['foo.call(null, 1, 2, 3);'] },
+  'no-useless-escape': { fail: ['"\\a";'] },
 };

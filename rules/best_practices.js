@@ -26,4 +26,5 @@ module.exports = {
   'no-self-compare': 'error', // https://github.com/dwyl/goodparts/issues/106
   'no-unused-expressions': 'error', // https://github.com/dwyl/goodparts/issues/113
   'no-useless-call': 'error', // https://github.com/dwyl/goodparts/issues/114
+  'no-useless-escape': 'error', // https://github.com/dwyl/goodparts/issues/116
 };
