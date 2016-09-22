@@ -10,4 +10,5 @@ module.exports = {
   'no-invalid-regexp': 'error', // https://github.com/dwyl/goodparts/issues/41
   'no-obj-calls': 'error', // https://github.com/dwyl/goodparts/issues/42
   'no-prototype-builtins': 'off', // https://github.com/dwyl/goodparts/issues/43
+  'no-sparse-arrays': 'error' //https://github.com/dwyl/goodparts/issues/44
 };

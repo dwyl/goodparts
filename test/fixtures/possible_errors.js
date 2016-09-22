@@ -15,4 +15,5 @@ module.exports = {
   'no-invalid-regexp': { fail: ['RegExp(\'[\')']},
   'no-obj-calls': { fail: ['var math = Math();'] },
   'no-prototype-builtins': null,
+  'no-sparse-arrays': { fail: ['[1, ,3]'] }
 };
