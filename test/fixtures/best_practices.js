@@ -28,4 +28,5 @@ module.exports = {
     fail: ['function two (x) { x = 2; }'],
     pass: ['function mutate (x) { x.a = 2; }']
   },
+  'no-redeclare': { fail: ['var x; var x;'] },
 };

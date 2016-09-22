@@ -21,4 +21,5 @@ module.exports = {
   'no-new-wrappers': 'error', // https://github.com/dwyl/goodparts/issues/94
   'no-octal-escape': 'error', // https://github.com/dwyl/goodparts/issues/96
   'no-param-reassign': ['error', { props: false }], // https://github.com/dwyl/goodparts/issues/98
+  'no-redeclare': 'error', // https://github.com/dwyl/goodparts/issues/99
 };
