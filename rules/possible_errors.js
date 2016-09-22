@@ -12,4 +12,5 @@ module.exports = {
   'no-prototype-builtins': 'off', // https://github.com/dwyl/goodparts/issues/43,
   'no-sparse-arrays': 'error', //https://github.com/dwyl/goodparts/issues/44
   'no-unexpected-multiline': 'error', //https://github.com/dwyl/goodparts/issues/46
+  'no-unsafe-finally': 'error', //https://github.com/dwyl/goodparts/issues/47
 };

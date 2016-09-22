@@ -16,5 +16,6 @@ module.exports = {
   'no-obj-calls': { fail: ['var math = Math();'] },
   'no-prototype-builtins': null,
   'no-sparse-arrays': { fail: ['[1, ,3]'] },
-  'no-unexpected-multiline': { fail: ['var foo = bar\n(1 || 2).baz();'] }
+  'no-unexpected-multiline': { fail: ['var foo = bar\n(1 || 2).baz();'] },
+  'no-unsafe-finally': { fail: [read('no-unsafe-finally.fail')] }
 };
