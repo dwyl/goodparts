@@ -25,4 +25,5 @@ module.exports = {
   'no-script-url': 'error', // https://github.com/dwyl/goodparts/issues/105
   'no-self-compare': 'error', // https://github.com/dwyl/goodparts/issues/106
   'no-unused-expressions': 'error', // https://github.com/dwyl/goodparts/issues/113
+  'no-useless-call': 'error', // https://github.com/dwyl/goodparts/issues/114
 };
