@@ -14,4 +14,5 @@ module.exports = {
   'no-empty-function': { fail: ['function foo() {}'] },
   'no-eq-null': { fail: ['var x; x = val == null;'] },
   'no-extend-native': { fail: ['Object.prototype.a = "a";'] },
+  'no-extra-label': { fail: ['A: while (a) {break A;}'] },
 };
