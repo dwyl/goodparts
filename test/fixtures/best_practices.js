@@ -21,5 +21,6 @@ module.exports = {
   'no-iterator': { fail: ['foo.__iterator__ = function () {};'] },
   'no-lone-blocks': { fail: ['{}'] },
   'no-magic-numbers': null,
-  'no-multi-str': { fail: ['test\\\ncase'] }
+  'no-multi-str': { fail: ['test\\\ncase'] },
+  'no-new-wrappers': { fail: ['var s = new String("cheese");'] },
 };

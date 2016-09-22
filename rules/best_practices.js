@@ -18,4 +18,5 @@ module.exports = {
   'no-lone-blocks': 'error', // https://github.com/dwyl/goodparts/issues/91
   'no-magic-numbers': 'off', // https://github.com/dwyl/goodparts/issues/92
   'no-multi-str': 'error', // https://github.com/dwyl/goodparts/issues/93
+  'no-new-wrappers': 'error', // https://github.com/dwyl/goodparts/issues/94
 };
