@@ -11,5 +11,6 @@ module.exports = {
   'no-inner-declarations': { fail: [
     'if (test) {function func () { return; }}',
     'if (test) { var x; }'
-  ] }
+  ] },
+  'no-invalid-regexp': { fail: [ 'RegExp(\'[\')' ]}
 };
