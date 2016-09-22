@@ -12,5 +12,6 @@ module.exports = {
     'if (test) {function func () { return; }}',
     'if (test) { var x; }'
   ] },
-  'no-invalid-regexp': { fail: [ 'RegExp(\'[\')' ]}
+  'no-invalid-regexp': { fail: ['RegExp(\'[\')']},
+  'no-obj-calls': { fail: ['var math = Math();'] }
 };

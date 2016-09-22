@@ -7,5 +7,6 @@ module.exports = {
   'no-extra-parens': 'off', // https://github.com/dwyl/goodparts/issues/31
   'no-extra-semi': ['error', 'never'], // https://github.com/dwyl/goodparts/issues/33
   'no-inner-declarations': ['error', 'both'], // https://github.com/dwyl/goodparts/issues/40
-  'no-invalid-regexp': 'error' // https://github.com/dwyl/goodparts/issues/41
+  'no-invalid-regexp': 'error', // https://github.com/dwyl/goodparts/issues/41
+  'no-obj-calls': 'error', // https://github.com/dwyl/goodparts/issues/42
 };
