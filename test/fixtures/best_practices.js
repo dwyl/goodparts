@@ -24,4 +24,8 @@ module.exports = {
   'no-multi-str': { fail: ['test\\\ncase'] },
   'no-new-wrappers': { fail: ['var s = new String("cheese");'] },
   'no-octal-escape': { fail: ['var foo = "Copyright \\251"'] },
+  'no-param-reassign': {
+    fail: ['function two (x) { x = 2; }'],
+    pass: ['function mutate (x) { x.a = 2; }']
+  },
 };
