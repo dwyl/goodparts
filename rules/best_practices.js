@@ -24,4 +24,5 @@ module.exports = {
   'no-redeclare': 'error', // https://github.com/dwyl/goodparts/issues/99
   'no-script-url': 'error', // https://github.com/dwyl/goodparts/issues/105
   'no-self-compare': 'error', // https://github.com/dwyl/goodparts/issues/106
+  'no-unused-expressions': 'error', // https://github.com/dwyl/goodparts/issues/113
 };
