@@ -19,4 +19,13 @@ module.exports = {
   "id-match": "off", // https://github.com/dwyl/goodparts/issues/202
   "indent": ["error", 4], // https://github.com/dwyl/goodparts/issues/201
   "jsx-quotes": "off", // https://github.com/dwyl/goodparts/issues/199
+  "padded-blocks": ["error", "never"], // https://github.com/dwyl/goodparts/issues/55
+  "quote-props": ["error", "consistent-as-needed", { "keywords": false }], // https://github.com/dwyl/goodparts/issues/54
+  "quotes": ["error", "single", {"avoidEscape": false, "allowTemplateLiterals": false}], // https://github.com/dwyl/goodparts/issues/53
+  "semi-spacing": ["error", {"before": false, "after": true}], // https://github.com/dwyl/goodparts/issues/50
+  "sort-keys": "off", // https://github.com/dwyl/goodparts/issues/39
+  "sort-vars": "off", // https://github.com/dwyl/goodparts/issues/38
+  "space-in-parens": ["error", "never"], // https://github.com/dwyl/goodparts/issues/34
+  "spaced-comment": ["error", "always"], // https://github.com/dwyl/goodparts/issues/20
+  "wrap-regex": "off" // https://github.com/dwyl/goodparts/issues/20
 };

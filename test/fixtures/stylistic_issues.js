@@ -59,5 +59,32 @@ module.exports = {
     fail: [read('ident.fail')],
     pass: [read('ident.pass')]
   },
-  'jsx-quotes': null
+  'jsx-quotes': null,
+  'padded-blocks': {
+    fail: [read('padded-blocks.fail')],
+    pass: [read('padded-blocks.pass')]
+  },
+  'quote-props': {
+    fail: [read('quote-props.fail')],
+    pass: [read('quote-props.pass')]
+  },
+  'quotes': {
+    fail: [read('quotes.fail')],
+    pass: [read('quotes.pass')]
+  },
+  'semi-spacing': {
+    fail: ['var a = 2 ;', 'var foo;var bar;'],
+    pass: ['var a = 2;', 'var foo; var bar;']
+  },
+  'sort-keys': null,
+  'sort-vars': null,
+  'space-in-parens': {
+    fail: ['foo( "bar" );'],
+    pass: ['foo("ba");']
+  },
+  'spaced-comment': {
+    fail: ['//no space'],
+    pass: ['// yes!']
+  },
+  'wrap-regex': null
 };
