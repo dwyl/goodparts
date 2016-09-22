@@ -16,4 +16,5 @@ module.exports = {
   'no-implied-eval': 'error', // https://github.com/dwyl/goodparts/issues/83
   'no-iterator': 'error', // https://github.com/dwyl/goodparts/issues/84
   'no-lone-blocks': 'error', // https://github.com/dwyl/goodparts/issues/91
+  'no-magic-numbers': 'off', // https://github.com/dwyl/goodparts/issues/92
 };

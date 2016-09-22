@@ -20,4 +20,5 @@ module.exports = {
   'no-implied-eval': { fail: ['setTimeout("alert(\'Hi!\');", 100);'] },
   'no-iterator': { fail: ['foo.__iterator__ = function () {};'] },
   'no-lone-blocks': { fail: ['{}'] },
+  'no-magic-numbers': null,
 };
