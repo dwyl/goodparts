@@ -13,5 +13,6 @@ module.exports = {
     'if (test) { var x; }'
   ] },
   'no-invalid-regexp': { fail: ['RegExp(\'[\')']},
-  'no-obj-calls': { fail: ['var math = Math();'] }
+  'no-obj-calls': { fail: ['var math = Math();'] },
+  'no-prototype-builtins': null,
 };
