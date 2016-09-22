@@ -27,5 +27,14 @@ module.exports = {
   "sort-vars": "off", // https://github.com/dwyl/goodparts/issues/38
   "space-in-parens": ["error", "never"], // https://github.com/dwyl/goodparts/issues/34
   "spaced-comment": ["error", "always"], // https://github.com/dwyl/goodparts/issues/20
-  "wrap-regex": "off" // https://github.com/dwyl/goodparts/issues/20
+  "wrap-regex": "off", // https://github.com/dwyl/goodparts/issues/20
+  "max-len": ["error", {
+    code: 80,
+    ignoreTrailingComments: true,
+    comments: 80,
+    tabWidth: 2,
+    ignoreUrls: false,
+    ignoreStrings: false,
+    ignoreTemplateLiterals: false
+  }], // https://github.com/dwyl/goodparts/issues/186
 };
