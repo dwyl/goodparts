@@ -29,4 +29,5 @@ module.exports = {
     pass: ['function mutate (x) { x.a = 2; }']
   },
   'no-redeclare': { fail: ['var x; var x;'] },
+  'no-script-url': { fail: ['location.href = "javascript:void(0)";'] },
 };
