@@ -10,7 +10,8 @@ module.exports = {
     fail: ['[1].map(function(n) { return arguments.callee(n - 1);});']
   },
   'guard-for-in': null,
-  'no-div-regex': { fail: 'function bar() { return /=foo/; }' },
-  'no-empty-function': { fail: 'function foo() {}' },
-  'no-eq-null': { fail: 'var x; x = val == null;' },
+  'no-div-regex': { fail: ['function bar() { return /=foo/; }'] },
+  'no-empty-function': { fail: ['function foo() {}'] },
+  'no-eq-null': { fail: ['var x; x = val == null;'] },
+  'no-extend-native': { fail: ['Object.prototype.a = "a";'] },
 };

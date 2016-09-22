@@ -9,4 +9,5 @@ module.exports = {
   'no-div-regex': 'error', // https://github.com/dwyl/goodparts/issues/69
   'no-empty-function': 'error', // https://github.com/dwyl/goodparts/issues/70
   'no-eq-null': 'error', // https://github.com/dwyl/goodparts/issues/75
+  'no-extend-native': 'error', // https://github.com/dwyl/goodparts/issues/77
 };
