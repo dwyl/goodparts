@@ -30,4 +30,5 @@ module.exports = {
   },
   'no-redeclare': { fail: ['var x; var x;'] },
   'no-script-url': { fail: ['location.href = "javascript:void(0)";'] },
+  'no-self-compare': { fail: ['var x = 10; if (x === x) { x = 20; };'] },
 };
