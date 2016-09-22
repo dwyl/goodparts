@@ -32,11 +32,13 @@ test('Testing All Conifgurable Rules', function (t) {
     if (testObject[rule] === null) {
       return t.ok(ruleNotSet, rule + ' not configured');
     }
+    var fCases = testObject[rule].fail;
+    var pCases = testObject[rule].pass
 
-    testObject[rule].fail.forEach(function (text) {
+    fCases && fCases.forEach(function (text) {
       t.notOk(passesRule(rule, text), rule + ' fails');
     });
-    testObject[rule].pass.forEach(function (text) {
+    pCases && pCases.forEach(function (text) {
       t.ok(passesRule(rule, text), rule + ' passes');
     });
   });
