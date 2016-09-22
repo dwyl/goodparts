@@ -16,4 +16,5 @@ module.exports = {
   'no-extend-native': { fail: ['Object.prototype.a = "a";'] },
   'no-extra-label': { fail: ['A: while (a) {break A;}'] },
   'no-floating-decimal': { fail: ['var x = .5;'] },
+  'no-implicit-coercion': { fail: ['var x = !!1;'] },
 };
