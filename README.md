@@ -66,7 +66,12 @@ And then in your `.eslintrc` just add the following:
   "extends": "dwyl"
 }
 ```
-Alternatively, you can also add this to the `"eslintConfig"` field in your `package.json`.
+Alternatively, you can also add this to the `"eslintConfig"` field in your `package.json`:
+```
+"eslintConfig": {
+  "extends": "dwyl"
+}
+```
 
 <br />
 
