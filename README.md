@@ -56,8 +56,17 @@ http://eslint.org/docs/about/
 
 
 ## *How?*
-
-> This is where _you_ come in @SimonLab ... :wink:
+Simply install our configuration
+```
+$ npm i --save-dev eslint-config-dwyl
+```
+And then in your `.eslintrc` just add the following:
+```
+{
+  "extends": "dwyl"
+}
+```
+Alternatively, you can also add this to the `"eslintConfig"` field in your `package.json`.
 
 <br />
 
