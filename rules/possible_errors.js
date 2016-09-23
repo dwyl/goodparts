@@ -1,21 +1,21 @@
 module.exports = {
   "valid-jsdoc": ["error", {
     "prefer": { "arg": "param", "argument": "param", "return": "returns" }
-  }],
+  }], // https://github.com/dwyl/goodparts/issues/56
   "no-irregular-whitespace": ["error", {
     "skipStrings": true,
     "skipComments": true,
     "skipRegExps": true,
     "skipTemplates": true
-  }],
-  "no-func-assign": ["error", "never"],
-  "no-extra-boolean-cast": "error",
-  "no-empty": ["error", "never"],
-  "no-duplicate-case": ["error", "never"],
-  "no-dupe-args": ["error", "never"],
-  "no-control-regex": "error",
-  "no-constant-condition": ["error", "never"],
-  "no-cond-assign": ["error", "never"],
+  }], // https://github.com/dwyl/goodparts/issues/45
+  "no-func-assign": ["error", "never"], // https://github.com/dwyl/goodparts/issues/35
+  "no-extra-boolean-cast": "error", // https://github.com/dwyl/goodparts/issues/30
+  "no-empty": ["error", "never"], // https://github.com/dwyl/goodparts/issues/28
+  "no-duplicate-case": ["error", "never"], // https://github.com/dwyl/goodparts/issues/25
+  "no-dupe-args": ["error", "never"], // https://github.com/dwyl/goodparts/issues/22
+  "no-control-regex": "error", // https://github.com/dwyl/goodparts/issues/21
+  "no-constant-condition": ["error", "never"], // https://github.com/dwyl/goodparts/issues/18
+  "no-cond-assign": ["error", "never"], // https://github.com/dwyl/goodparts/issues/15
   'no-console': 'error', // https://github.com/dwyl/goodparts/issues/16
   'no-debugger': 'error', // https://github.com/dwyl/goodparts/issues/23
   'no-dupe-keys': 'error', // https://github.com/dwyl/goodparts/issues/24
