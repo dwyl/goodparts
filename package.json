@@ -12,5 +12,12 @@
   },
   "peerDependencies": {
     "eslint": ">=3.5.0"
-  }
+  },
+  "contributors": [
+    "Elias Malik",
+    "Jack Rans",
+    "Sam Houston",
+    "Simon Labondance"
+  ],
+
 }
