@@ -11,6 +11,6 @@
     "tape": "^4.6.0"
   },
   "peerDependencies": {
-    "eslint": ">=3.5.0",
+    "eslint": ">=3.5.0"
   }
 }
