@@ -1,5 +1,5 @@
 module.exports = {
-  'no-console': 'off', // https://github.com/dwyl/goodparts/issues/16
+  'no-console': 'error', // https://github.com/dwyl/goodparts/issues/16
   'no-debugger': 'error', // https://github.com/dwyl/goodparts/issues/23
   'no-dupe-keys': 'error', // https://github.com/dwyl/goodparts/issues/24
   'no-empty-character-class': 'error', // 'https://github.com/dwyl/goodparts/issues/26'

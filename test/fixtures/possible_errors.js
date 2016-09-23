@@ -1,7 +1,7 @@
 var read = require('../read.js');
 
 module.exports = {
-  'no-console': null,
+  'no-console': { fail: ['console.log("not allowed")'] },
   'no-debugger': { fail: ['debugger;'] },
   'no-dupe-keys': { fail: ['var x = {a:1, a: "repeat"'] },
   'no-empty-character-class': { fail: ['/^abc[]/.test("abcdefg");'] },
