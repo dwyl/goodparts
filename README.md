@@ -58,18 +58,12 @@ http://eslint.org/docs/about/
 ## *How?*
 Simply install our configuration
 ```
-$ npm i --save-dev eslint-config-dwyl
+$ npm i --save-dev goodparts
 ```
-And then in your `.eslintrc` just add the following:
+Then you can add the following script to your `package.json`:
 ```
 {
-  "extends": "dwyl"
-}
-```
-Alternatively, you can also add this to the `"eslintConfig"` field in your `package.json`:
-```
-"eslintConfig": {
-  "extends": "dwyl"
+  "lint": "node_modules/.bin/goodparts path/to/files/for/linting"
 }
 ```
 
