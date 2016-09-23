@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-dwyl",
+  "name": "goodparts",
   "description": "An ESLint Style that only allows JavaScript the Good Parts (and \"Better Parts\") in your codebase.",
   "version": "0.0.1",
   "main": ".eslintrc.js",
@@ -7,12 +7,12 @@
     "test": "tape test/"
   },
   "devDependencies": {
-    "eslint": "^3.5.0",
     "tape": "^4.6.0"
   },
-  "peerDependencies": {
-    "eslint": ">=3.5.0"
+  "dependencies": {
+    "eslint": "^3.5.0"
   },
+  "bin": "./bin/cmd.js",
   "contributors": [
     "nelsonic",
     "eliascodes",
