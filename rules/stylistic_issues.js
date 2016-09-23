@@ -1,6 +1,5 @@
 module.exports = {
   "space-infix-ops": ["error", {"int32Hint": false}], // https://github.com/dwyl/goodparts/issues/32
-  "max-len": ["error", 80], // https://github.com/dwyl/goodparts/issues/186
   "array-bracket-spacing": ["error", "never"], // https://github.com/dwyl/goodparts/issues/219
   "block-spacing": "error", // https://github.com/dwyl/goodparts/issues/218
   "brace-style": ["error", "1tbs", { "allowSingleLine": true }], // https://github.com/dwyl/goodparts/issues/217
@@ -28,4 +27,15 @@ module.exports = {
   "space-in-parens": ["error", "never"], // https://github.com/dwyl/goodparts/issues/34
   "spaced-comment": ["error", "always"], // https://github.com/dwyl/goodparts/issues/20
   "wrap-regex": "off", // https://github.com/dwyl/goodparts/issues/17
+  "max-len": [
+    "error", {
+      code: 80,
+      ignoreTrailingComments: true,
+      comments: 80,
+      tabWidth: 2,
+      ignoreUrls: false,
+      ignoreStrings: false,
+      ignoreTemplateLiterals: false
+    }
+  ] // https://github.com/dwyl/goodparts/issues/186
 };
