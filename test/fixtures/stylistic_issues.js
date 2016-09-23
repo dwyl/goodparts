@@ -2,7 +2,7 @@ var read = require('../read.js');
 
 module.exports = {
   'max-len': {
-    fail: [read('./max-len.fail')],
+    fail: [read('./max-len.fail0'),read('./max-len.fail1') ],
     pass: ['aaaaaa']
   },
   'space-infix-ops': {
@@ -49,7 +49,7 @@ module.exports = {
     ]
   },
   'require-jsdoc': {
-    pass: ['funciton () {};']
+    pass: ['function () {};']
   },
   'operator-linebreak': {
     fail: ['var foo = 1 +\n2;'],
@@ -157,7 +157,7 @@ module.exports = {
     pass: ['var a = 1;']
   },
   'max-params': {
-    fail: ['function foo (arg1, arg2, arg3, arg4, arg5, arg6) {};']
+    fail: ['function foo (arg1, arg2, arg3, arg4, arg5, arg6) {};'],
     pass: ['function foo (arg1, arg2, arg3, arg4, arg5) {};']
   },
   'max-nested-callbacks': {
@@ -180,4 +180,12 @@ module.exports = {
     fail: [read('./lines-around-directive.fail0'), read('./lines-around-directive.fail0')],
     pass: [read('./lines-around-directive.pass0'), read('./lines-around-directive.pass1')]
   },
+  'keyword-spacing': {
+    fail: ['if(true){};'],
+    pass: ['if (true) {};']
+  },
+  'key-spacing': {
+    fail: ['{key :42};'],
+    pass: ['{key: 42};']
+  }
 };

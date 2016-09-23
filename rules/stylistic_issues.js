@@ -1,6 +1,5 @@
 module.exports = {
   "space-infix-ops": ["error", {"int32Hint": false}], // https://github.com/dwyl/goodparts/issues/32
-  "max-len": ["error", 80], // https://github.com/dwyl/goodparts/issues/186
   "unicode-bom": "off", // https://github.com/dwyl/goodparts/issues/19
   "space-unary-ops": [2, {"words": true, "nonwords": false}], // https://github.com/dwyl/issues/27
   "space-infix-ops": [2, {"int32Hint": false}], // https://github.com/dwyl/goodparts/issues/32
@@ -47,10 +46,12 @@ module.exports = {
   "max-params": ["error", 5], // https://github.com/dwyl/goodparts/issues/177
   "max-nested-callbacks": ["error", 4], // https://github.com/dwyl/goodparts/issues/184
   "max-lines": ["error", {"max": 300, "skipComments": true}], // https://github.com/dwyl/goodparts/issues/185
-  "max-len": ["error": { "code": 80, "ignoreTrailingComments": true, "comments": 80, "tabWidth": 2, "ignoreUrls": false, "ignoreStrings": false, "ignoreTemplateLiterals": false }], // https://github.com/dwyl/goodparts/issues/186
+  "max-len": ["error", { "code": 80, "ignoreTrailingComments": true, "comments": 80, "tabWidth": 2, "ignoreUrls": false, "ignoreStrings": false, "ignoreTemplateLiterals": false }], // https://github.com/dwyl/goodparts/issues/186
   "max-depth": ["error", 4], // https://github.com/dwyl/goodparts/issues/187
   "lines-around-directive": ["error", { "before": "never", "after": "always" }], // https://github.com/dwyl/goodparts/issues/193
   "lines-around-comment": "off", // https://github.com/dwyl/goodparts/issues/194
   "linebreak-style": ["error", "unix"], // https://github.com/dwyl/goodparts/issues/195
   "line-comment-position": "error", // https://github.com/dwyl/goodparts/issues/196
+  "keyword-spacing": ["error", { "before": true, "after": true }], // https://github.com/dwyl/goodparts/issues/197
+  "key-spacing": ["error", { "beforeColon": false, "afterColon": true, "mode": 'strict' }] // https://github.com/dwyl/goodparts/issues/198
 };
