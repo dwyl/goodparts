@@ -56,8 +56,16 @@ http://eslint.org/docs/about/
 
 
 ## *How?*
-
-> This is where _you_ come in @SimonLab ... :wink:
+Simply install our configuration
+```
+$ npm i --save-dev goodparts
+```
+Then you can add the following script to your `package.json`:
+```
+{
+  "lint": "node_modules/.bin/goodparts path/to/files/for/linting"
+}
+```
 
 <br />
 
