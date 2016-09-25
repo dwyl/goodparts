@@ -32,7 +32,7 @@ test('Testing All Conifgurable Rules', function (t) {
       return t.fail(rule + ' not configured');
     }
 
-    if (testObject[rule] === null) {
+    if ([null, undefined].indexOf(testObject[rule]) > -1) {
       return t.ok(ruleNotSet, rule + ' not configured');
     }
 
