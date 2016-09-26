@@ -202,7 +202,7 @@ module.exports = {
     ]
   },
   'no-mixed-spaces-and-tabs': {
-    fail: ['var x = \t\s\s1;'],
+    fail: ['var x = \s\t\s\s1;'],
     pass: ['var x =\t1;', 'var x = 1;']
   },
   'no-mixed-operators': null,
