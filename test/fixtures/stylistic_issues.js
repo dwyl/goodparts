@@ -11,7 +11,7 @@ module.exports = {
   },
   'block-spacing': {
     fail: ['{var a =2; }'],
-    pass: ['{var a =2;}']
+    pass: ['{ var a =2; }']
   },
   'brace-style': {
     fail: [read('brace-style.fail')],
