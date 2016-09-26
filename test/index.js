@@ -49,3 +49,8 @@ test('Testing All Conifgurable Rules', function (t) {
 
   t.end();
 });
+
+test('Testing bin file executes without error', function (t) {
+  require('../bin/cmd.js');
+  t.end();
+});
