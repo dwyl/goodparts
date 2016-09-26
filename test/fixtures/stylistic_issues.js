@@ -218,8 +218,8 @@ module.exports = {
   },
   'newline-per-chained-call': {
     fail: [
-      'var _ = require("./u.js");\n_.chain().chain2();',
-      'var _ = require("./u.js");\n_\n.chain({}).prop.prop;'
+      'var _ = require("./u.js");\n_.chain().chain2().chain3();',
+      'var _ = require("./u.js");\n_.chain({}).chain().chain().prop.chain();'
     ],
     pass: [
       'var _ = require("./u.js");\n_\n  .chain()\n  .chain();',
@@ -236,12 +236,12 @@ module.exports = {
     pass: ['var x = 1;\n\nconsole.log(x);']
   },
   'new-parens': {
-    fail: ['var Hapi = new require("hapi").Server\nvar server = Hapi()'],
+    fail: ['var Hapi = new require("hapi")\nvar serv = new Hapi\nvar server = Hapi()'],
     pass: ['var Hapi = require("hapi");\nvar server = new Hapi.Server();']
   },
   'new-cap': {
-    fail: ['var hapi = require("hapi");\nvar server = new hapi.Server();'],
-    pass: ['var Hapi = require("hapi");\nvar Server = new Hapi.Server();']
+    fail: ['var hapi = require("hapi");\nvar server = new hapi();'],
+    pass: ['var Hapi = require("hapi");\nvar Server = new Hapi();']
   },
   'multiline-ternary': null,
   'max-statements': null,

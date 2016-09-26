@@ -1,7 +1,9 @@
 if (true) {
-    console.log('foo');
+  console.log('foo');
 } else {
   if (true) {
     console.log('bar');
-  };
+  } else {
+    console.log('baz');
+  }
 };

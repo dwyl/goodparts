@@ -66,7 +66,7 @@ module.exports = {
   "no-multiple-empty-lines": ["error", { "max": 2, "maxBOF": 0, "maxEOF": 1}], // https://github.com/dwyl/goodparts/issues/148
   "no-mixed-spaces-and-tabs": 2, // https://github.com/dwyl/goodparts/issues/149
   "no-mixed-operators": 0, // https://github.com/dwyl/goodparts/issues/155
-  "no-lonely-if": 2, // https://github.com/dwyl/goodparts/issues/160
+  "no-lonely-if": "error", // https://github.com/dwyl/goodparts/issues/160
   "no-inline-comments": 0, // https://github.com/dwyl/goodparts/issues/161
   "no-bitwise": 0, // https://github.com/dwyl/goodparts/issues/164
   "no-array-constructor": 2, // https://github.com/dwyl/goodparts/issues/165
