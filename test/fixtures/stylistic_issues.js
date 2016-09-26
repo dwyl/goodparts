@@ -190,11 +190,19 @@ module.exports = {
   },
   'no-negated-condition': null,
   'no-multiple-empty-lines': {
-    fail: ['\nvar x = 1;', 'var x = 1;\n\n', 'var x = 1;\n\n\nvar y = 2;'],
-    pass: ['var x = 1;', 'var x = 1;\n', 'var x = 1;\n\nvar y = 2;']
+    fail: [
+      '\nvar x = 1;',
+      'var x = 1;\n\n\n',
+      'var x = 1;\n\n\n\n\nvar y = 2;'
+    ],
+    pass: [
+      'var x = 1;',
+      'var x = 1;\n',
+      'var x = 1;\n\nvar y = 2;'
+    ]
   },
   'no-mixed-spaces-and-tabs': {
-    fail: ['var x = \t1;'],
+    fail: ['var x = \t\s\s1;'],
     pass: ['var x =\t1;', 'var x = 1;']
   },
   'no-mixed-operators': null,

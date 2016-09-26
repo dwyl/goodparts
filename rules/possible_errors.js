@@ -35,4 +35,5 @@ module.exports = {
   'no-unreachable': "error", // https://github.com/dwyl/goodparts/issues/240
   'use-isnan': 'error', // https://github.com/dwyl/goodparts/issues/48
   'valid-typeof': ['error', { 'requireStringLiterals': true }], // https://github.com/dwyl/goodparts/issues/52
+  'no-regex-spaces': 'error', // http://eslint.org/docs/rules/
 };

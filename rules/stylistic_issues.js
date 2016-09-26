@@ -87,5 +87,6 @@ module.exports = {
   "linebreak-style": ["error", "unix"], // https://github.com/dwyl/goodparts/issues/195
   "line-comment-position": "error", // https://github.com/dwyl/goodparts/issues/196
   "keyword-spacing": ["error", { "before": true, "after": true }], // https://github.com/dwyl/goodparts/issues/197
-  "key-spacing": ["error", { "beforeColon": false, "afterColon": true, "mode": 'strict' }] // https://github.com/dwyl/goodparts/issues/198
+  "key-spacing": ["error", { "beforeColon": false, "afterColon": true, "mode": 'strict' }], // https://github.com/dwyl/goodparts/issues/198
+  "no-restricted-syntax": "off", // https://github.com/dwyl/goodparts/issues/111
 };
