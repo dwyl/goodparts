@@ -1,0 +1,1 @@
+var nodouble = 'double';
