@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "main": ".eslintrc.js",
   "scripts": {
-    "test": "tape test/"
+    "test": "tape test/",
+    "lint": "bin/cmd.js ."
   },
   "devDependencies": {
     "tape": "^4.6.0"
