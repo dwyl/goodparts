@@ -4,10 +4,12 @@
   "version": "1.0.0",
   "main": ".eslintrc.js",
   "scripts": {
-    "test": "tape test/",
+    "test": "tape test/index.js",
+    "coverage": "node_modules/.bin/istanbul cover tape test/index.js",
     "lint": "bin/cmd.js ."
   },
   "devDependencies": {
+    "istanbul": "^0.4.5",
     "tape": "^4.6.0"
   },
   "dependencies": {
