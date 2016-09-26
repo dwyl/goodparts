@@ -4,6 +4,7 @@ var possibleErrors = require('./possible_errors');
 var strict = require('./strict');
 var stylisticIssues = require('./stylistic_issues');
 var variables = require('./variables');
+var es6 = require('./es6');
 
 module.exports = Object.assign({},
   bestPractices,
@@ -11,5 +12,6 @@ module.exports = Object.assign({},
   possibleErrors,
   strict,
   stylisticIssues,
-  variables
+  variables,
+  es6
 );
