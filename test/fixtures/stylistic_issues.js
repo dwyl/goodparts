@@ -259,7 +259,7 @@ module.exports = {
     pass: ['if (true) {};']
   },
   'key-spacing': {
-    fail: ['{key :42};'],
-    pass: ['{key: 42};']
+    fail: ['var obj = {key : 42};'],
+    pass: ['var obj = {key: 42};']
   }
 };
