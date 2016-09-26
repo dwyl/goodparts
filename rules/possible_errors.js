@@ -28,8 +28,11 @@ module.exports = {
   'no-obj-calls': 'error', // https://github.com/dwyl/goodparts/issues/42
   'no-prototype-builtins': 'off', // https://github.com/dwyl/goodparts/issues/43,
   'no-sparse-arrays': 'error', //https://github.com/dwyl/goodparts/issues/44
+  'no-template-curly-in-string': 'off', // https://github.com/dwyl/goodparts/issues/241
   'no-unexpected-multiline': 'error', //https://github.com/dwyl/goodparts/issues/46
   'no-unsafe-finally': 'error', //https://github.com/dwyl/goodparts/issues/47
+  'no-unsafe-negation': 'error', //https://github.com/dwyl/goodparts/issues/239
+  'no-unreachable': "error", // https://github.com/dwyl/goodparts/issues/240
   'use-isnan': 'error', // https://github.com/dwyl/goodparts/issues/48
   'valid-typeof': ['error', { 'requireStringLiterals': true }], // https://github.com/dwyl/goodparts/issues/52
 };

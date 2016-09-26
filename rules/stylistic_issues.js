@@ -44,14 +44,11 @@ module.exports = {
   "space-before-function-paren": [2, { "anonymous": "always", "named": "always" }], // https://github.com/dwyl/goodparts/issues/36
   "space-before-blocks": [2, { "functions": "always", "keywords": "always" }], // https://github.com/dwyl/goodparts/issues/37
   "semi": [2, "always", { "omitLastInOneLineBlock": true }], // https://github.com/dwyl/goodparts/issues/49
-  "require-jsdoc": [2, {"require": {
-      "FunctionDeclaration": false,
-      "MethodDefinition": false,
-      "ClassDeclaration": false
-    }
-  }], // https://github.com/dwyl/goodparts/issues/51
+  "require-jsdoc": "off", // https://github.com/dwyl/goodparts/issues/51
   "operator-linebreak": ["error", "before"], // http://eslint.org/docs/rules/operator-linebreak
   "operator-assignment": ["error", "always"], // https://github.com/dwyl/goodparts/issues/76
+  "one-var-declaration-per-line": "off",
+  "one-var": ["error", { "initialized": "never", "uninitialized": "always" }],
   "object-property-newline": ["error", { "allowMultiplePropertiesPerLine": true }], // https://github.com/dwyl/goodparts/issues/85
   "object-curly-spacing": [2, "always", {"objectsInObjects": true, "arraysInObjects": true}], // https://github.com/dwyl/goodparts/issues/86
   "object-curly-newline": [2, { "minProperties": 2}], // https://github.com/dwyl/goodparts/issues/100

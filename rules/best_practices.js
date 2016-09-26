@@ -25,6 +25,7 @@ module.exports = {
   "no-return-assign": ["error", "always"], // https://github.com/dwyl/goodparts/issues/147
   "no-self-assign": ["error", { props: true }], // https://github.com/dwyl/goodparts/issues/159
   "no-sequences": "error", // https://github.com/dwyl/goodparts/issues/163
+  "no-throw-literal": "error", // https://github.com/dwyl/goodparts/issues/108
   "no-unused-labels": "error", // https://github.com/dwyl/goodparts/issues/166
   "no-useless-concat": "error", // https://github.com/dwyl/goodparts/issues/172
   "no-unmodified-loop-condition": "error", // https://github.com/dwyl/goodparts/issues/178

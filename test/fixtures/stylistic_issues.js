@@ -88,14 +88,14 @@ module.exports = {
   },
   'space-unary-ops': {
     fail: [
-      'varhi = "world";',
-      'var hi= "world";',
-      'var hi ="world";',
-      'var bool = ! true;'
+      'i ++;',
+      '-- i;',
+      'delete(foo.bar);',
+      '+ "3"'
     ],
     pass: [
-      'var hi = "world";',
-      'var bool = !true;'
+      '+"3"',
+      'i++'
     ]
   },
   'space-infix-ops': {
@@ -119,19 +119,19 @@ module.exports = {
     pass: [
       'var a = 1;\nvar b = 3;',
       'if (foo) { bar() }',
-      'if (foo) { bar(); }'
+      'var x = function () {\n};'
     ]
   },
   'require-jsdoc': {
-    pass: ['function () {};']
+    pass: ['function foo () {};']
   },
   'operator-linebreak': {
     fail: ['var foo = 1 +\n2;'],
     pass: ['var foo = 1\n+ 2;']
   },
   'operator-assignment': {
-    fail: ['var x = x + 1'],
-    pass: ['var x += 1']
+    fail: ['var x = 0; x = x + 1;'],
+    pass: ['var x = 0; x += 1;']
   },
   'object-property-newline': {
     fail: ['var obj = { key: "value", key1: "value1",\nkey2: "value2"};'],
@@ -148,7 +148,18 @@ module.exports = {
   },
   'object-curly-newline': {
     fail: ['var obj = {\nkey: 1\n}', 'var obj = { key: 1, key2: 2, key3: 3 }'],
-    pass: ['var obj = { key: 1 }', 'var obj = { key: 1,\nkey2: 2}']
+    pass: ['var obj = { key: 1 }', 'var obj = {\nkey: 1,\nkey2: 2\n}']
+  },
+  'one-var-declaration-per-line': null,
+  'one-var': {
+    fail: [
+      'var a;\nvar b;',
+      'var a=1, b=2;'
+    ],
+    pass: [
+      'var a=1;\nvar b=2;',
+      'var a, b, c;'
+    ]
   },
   'no-whitespace-before-property': {
     fail: ['foo [bar]', 'foo. bar'],
