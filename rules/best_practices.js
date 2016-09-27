@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   'accessor-pairs': 'error', // https://github.com/dwyl/goodparts/issues/59
   'block-scoped-var': 'error', // https://github.com/dwyl/goodparts/issues/61
