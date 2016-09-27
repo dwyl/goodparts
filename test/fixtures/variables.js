@@ -26,7 +26,7 @@ module.exports = {
     fail: ['var x;\ndelete x;'],
     pass: ['var x;']
   },
-  'no-label-var': null,
+  'no-label-var': { fail: ['var x = 1;\nx: for (var key in obj) {}'] },
   'no-restricted-globals': null,
   'no-shadow': { fail: ['var a = 1; function () {var a = 2;}'] },
   'no-undef': { fail: ['var x = 1; y = 3;'] }
