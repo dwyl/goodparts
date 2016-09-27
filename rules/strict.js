@@ -1,3 +1,3 @@
-module.exports = {
-  "strict": "error"
-};
+'use strict';
+
+module.exports = { strict: 2 };

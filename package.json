@@ -1,7 +1,7 @@
 {
   "name": "goodparts",
   "description": "An ESLint Style that only allows JavaScript the Good Parts (and \"Better Parts\") in your codebase.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": ".eslintrc.js",
   "scripts": {
     "test": "tape test/index.js",
@@ -13,7 +13,7 @@
     "tape": "^4.6.0"
   },
   "dependencies": {
-    "eslint": "^3.5.0"
+    "eslint": "^3.6.1"
   },
   "bin": "./bin/cmd.js",
   "contributors": [

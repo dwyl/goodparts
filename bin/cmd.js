@@ -1,9 +1,10 @@
 #!/usr/bin/env node
+'use strict';
 
 var path = require('path');
 var eslint = require('eslint');
 
-var configFilePath = path.resolve(__dirname, '..', '.eslintrc.js')
+var configFilePath = path.resolve(__dirname, '..', '.eslintrc.js');
 var cli, report;
 
 cli = new eslint.CLIEngine({ configFile: configFilePath });

@@ -15,14 +15,13 @@ module.exports = {
       read('./no-irregular-whitespace.fail')
     ]
   },
-
   'no-func-assign': {
     fail: [
       'function foo () {}; foo = 1;'
     ]
   },
 
-  "no-extra-boolean-cast": {
+  'no-extra-boolean-cast': {
     fail: [
       '!!!foo',
       'Boolean(!!foo)',
@@ -30,7 +29,7 @@ module.exports = {
     ]
   },
 
-  "no-empty": {
+  'no-empty': {
     fail: [
       'if (true) {}',
       'while (1) {}',
@@ -38,32 +37,22 @@ module.exports = {
     ]
   },
 
-  "no-duplicate-case": {
-    fail: [
-      read('./no-duplicate-case.fail')
-    ]
-  },
-
-  "no-dupe-args": {
-    fail: [
-      'function (a, a) {};'
-    ]
-  },
-
-  "no-control-regex": {
+  'no-duplicate-case': { fail: [read('./no-duplicate-case.fail')] },
+  'no-dupe-args': { fail: ['function (a, a) {};']},
+  'no-control-regex': {
     fail: [
       'var x = /\x1f/',
       'var x = new RegExp("/\x1f/")'
     ]
   },
 
-  "no-constant-condition": {
+  'no-constant-condition': {
     fail: [
       'while (1) {}'
     ]
   },
 
-  "no-cond-assign": {
+  'no-cond-assign': {
     fail: [
       'if (foo = 1) { foo++; }'
     ]
@@ -79,18 +68,17 @@ module.exports = {
     'if (test) {function func () { return; }}',
     'if (test) { var x; }'
   ] },
-  'no-invalid-regexp': { fail: ['RegExp(\'[\')']},
+  'no-invalid-regexp': { fail: ['RegExp(\'[\')'] },
   'no-obj-calls': { fail: ['var math = Math();'] },
   'no-prototype-builtins': null,
+  'no-regex-spaces': null,
   'no-sparse-arrays': { fail: ['[1, ,3]'] },
-  'no-template-curly-in-string': {
-    pass: ['\'hello ${buddy}.\'']
-  },
+  'no-template-curly-in-string': { pass: ['\'hello ${buddy}.\''] },
   'no-unexpected-multiline': { fail: ['var foo = bar\n(1 || 2).baz();'] },
   'no-unsafe-finally': { fail: [read('no-unsafe-finally.fail')] },
   'no-unsafe-negation': {
     fail: ['if (!k in obj) {console.log(k);}'],
-    pass: ['if (!(k in obj)) {console.log(k);}'],
+    pass: ['if (!(k in obj)) {console.log(k);}']
   },
   'no-unreachable': {
     fail: [
