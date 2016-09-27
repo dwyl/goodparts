@@ -120,9 +120,15 @@ module.exports = {
   },
   'require-jsdoc': { pass: ['function foo () {};'] },
   'lines-around-comment': null,
-  'linebreak-style': null,
+  'linebreak-style': {
+    fail: ['var a = "a";\r\n'],
+    pass: ['var a = "a";\n']
+  },
   'line-comment-position': null,
-  'no-continue': null,
+  'no-continue': {
+    fail: ['var sum = 0, i;\n\nfor(i = 0; i < 10; i++) {\nif(i >= 5) {\ncontinue;\n}\na += i;\n}'],
+    pass: ['var sum = 0, i;\nfor(i = 0; i < 10; i++) {\nif(i < 5) {\na += i;\n}\n}']
+  },
   'operator-linebreak': {
     fail: ['var foo = 1 +\n2;'],
     pass: ['var foo = 1\n+ 2;']
@@ -232,7 +238,7 @@ module.exports = {
     pass: ['var x = 1;\n\nconsole.log(x);']
   },
   'new-parens': {
-    fail: ['var serv = new Hapi', 'var server = Hapi()'],
+    fail: ['var serv = new Hapi\nvar server = Hapi()'],
     pass: ['var Hapi = require("hapi");\nvar server = new Hapi.Server();']
   },
   'new-cap': {
