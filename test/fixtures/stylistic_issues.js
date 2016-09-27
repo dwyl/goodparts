@@ -198,8 +198,8 @@ module.exports = {
     ]
   },
   'no-mixed-spaces-and-tabs': {
-    fail: ['var x =  \t 1;'],
-    pass: ['var x =\t1;', 'var x = 1;']
+    fail: ['function foo () {\tvar x = 1,\n\t   y = 1;}'],
+    pass: ['function foo () {\tvar x = 1;\n\tvar y = 1;}']
   },
   'no-mixed-operators': null,
   'no-lonely-if': {

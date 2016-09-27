@@ -34,7 +34,10 @@ module.exports = {
       'while (node) { doSomething(node); node--; }'
     ]
   },
-  'wrap-iife': null,
+  'wrap-iife': {
+    fail: ['(function () {}())'],
+    pass: ['(function () {})()']
+  },
   'no-useless-concat': {
     fail: ['\'x\' + \'y\''],
     pass: ['var x = \'a\'; var y = x + \'b\';']

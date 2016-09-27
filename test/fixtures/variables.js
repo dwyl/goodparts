@@ -22,6 +22,6 @@ module.exports = {
   'no-delete-var': null,
   'no-label-var': null,
   'no-restricted-globals': null,
-  'no-shadow': null,
-  'no-undef': null
+  'no-shadow': { fail: ['var a = 1; function () {var a = 2;}'] },
+  'no-undef': { fail: ['var x = 1; y = 3;'] }
 };
