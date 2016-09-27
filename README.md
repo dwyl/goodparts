@@ -1,4 +1,4 @@
-# goodparts [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/good-parts/issues)
+# goodparts [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/good-parts/issues) [![Travis](https://img.shields.io/travis/dwyl/goodparts.svg?maxAge=2592000)](https://travis-ci.org/dwyl/goodparts)
 
 An ESLint Style that _only_ allows JavaScript the ***Good Parts*** (*and "Better Parts"*) in your code you can sleep at night.
 

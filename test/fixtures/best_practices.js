@@ -70,6 +70,10 @@ module.exports = {
     ]
   },
 
+  'no-throw-literal': {
+    fail: ['throw 0;', 'throw \'oops\'']
+  },
+
   'no-proto': { fail: [ 'var x = {}; console.log(x.__proto__);' ] },
 
   'no-octal': {

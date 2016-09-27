@@ -83,8 +83,21 @@ module.exports = {
   'no-obj-calls': { fail: ['var math = Math();'] },
   'no-prototype-builtins': null,
   'no-sparse-arrays': { fail: ['[1, ,3]'] },
+  'no-template-curly-in-string': {
+    pass: ['\'hello ${buddy}.\'']
+  },
   'no-unexpected-multiline': { fail: ['var foo = bar\n(1 || 2).baz();'] },
   'no-unsafe-finally': { fail: [read('no-unsafe-finally.fail')] },
+  'no-unsafe-negation': {
+    fail: ['if (!k in obj) {console.log(k);}'],
+    pass: ['if (!(k in obj)) {console.log(k);}'],
+  },
+  'no-unreachable': {
+    fail: [
+      'throw new Error(\'oops\'); console.log(\'hi\');}',
+      'function foo () {return 1; console.log(3);}'
+    ]
+  },
   'use-isnan': { fail: ['if (NaN == x) { x = 0; }'] },
   'valid-typeof': { fail: ['var x; if (typeof x == "jack") { x = "OMG"} '] }
 };

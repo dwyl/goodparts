@@ -44,14 +44,11 @@ module.exports = {
   "space-before-function-paren": [2, { "anonymous": "always", "named": "always" }], // https://github.com/dwyl/goodparts/issues/36
   "space-before-blocks": [2, { "functions": "always", "keywords": "always" }], // https://github.com/dwyl/goodparts/issues/37
   "semi": [2, "always", { "omitLastInOneLineBlock": true }], // https://github.com/dwyl/goodparts/issues/49
-  "require-jsdoc": [2, {"require": {
-      "FunctionDeclaration": false,
-      "MethodDefinition": false,
-      "ClassDeclaration": false
-    }
-  }], // https://github.com/dwyl/goodparts/issues/51
+  "require-jsdoc": "off", // https://github.com/dwyl/goodparts/issues/51
   "operator-linebreak": ["error", "before"], // http://eslint.org/docs/rules/operator-linebreak
   "operator-assignment": ["error", "always"], // https://github.com/dwyl/goodparts/issues/76
+  "one-var-declaration-per-line": "off",
+  "one-var": ["error", { "initialized": "never", "uninitialized": "always" }],
   "object-property-newline": ["error", { "allowMultiplePropertiesPerLine": true }], // https://github.com/dwyl/goodparts/issues/85
   "object-curly-spacing": [2, "always", {"objectsInObjects": true, "arraysInObjects": true}], // https://github.com/dwyl/goodparts/issues/86
   "object-curly-newline": [2, { "minProperties": 2}], // https://github.com/dwyl/goodparts/issues/100
@@ -69,7 +66,7 @@ module.exports = {
   "no-multiple-empty-lines": ["error", { "max": 2, "maxBOF": 0, "maxEOF": 1}], // https://github.com/dwyl/goodparts/issues/148
   "no-mixed-spaces-and-tabs": 2, // https://github.com/dwyl/goodparts/issues/149
   "no-mixed-operators": 0, // https://github.com/dwyl/goodparts/issues/155
-  "no-lonely-if": 2, // https://github.com/dwyl/goodparts/issues/160
+  "no-lonely-if": "error", // https://github.com/dwyl/goodparts/issues/160
   "no-inline-comments": 0, // https://github.com/dwyl/goodparts/issues/161
   "no-bitwise": 0, // https://github.com/dwyl/goodparts/issues/164
   "no-array-constructor": 2, // https://github.com/dwyl/goodparts/issues/165
@@ -90,5 +87,7 @@ module.exports = {
   "linebreak-style": ["error", "unix"], // https://github.com/dwyl/goodparts/issues/195
   "line-comment-position": "error", // https://github.com/dwyl/goodparts/issues/196
   "keyword-spacing": ["error", { "before": true, "after": true }], // https://github.com/dwyl/goodparts/issues/197
-  "key-spacing": ["error", { "beforeColon": false, "afterColon": true, "mode": 'strict' }] // https://github.com/dwyl/goodparts/issues/198
+  "key-spacing": ["error", { "beforeColon": false, "afterColon": true, "mode": 'strict' }], // https://github.com/dwyl/goodparts/issues/198
+  "no-restricted-syntax": "off", // https://github.com/dwyl/goodparts/issues/111
+  "no-continue": "error", // https://github.com/dwyl/goodparts/issues/162
 };

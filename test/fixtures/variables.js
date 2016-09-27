@@ -14,5 +14,9 @@ module.exports = {
   },
   'no-shadow-restricted-names': {
     fail: ['function NaN(){};']
+  },
+  'no-unused-vars': {
+    fail: ['var x = 1;'],
+    pass: ['var x = 1; console.log(x);']
   }
 };

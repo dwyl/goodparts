@@ -11,7 +11,7 @@ module.exports = {
   },
   'block-spacing': {
     fail: ['{var a =2; }'],
-    pass: ['{var a =2;}']
+    pass: ['{ var a =2; }']
   },
   'brace-style': {
     fail: [read('brace-style.fail')],
@@ -88,14 +88,14 @@ module.exports = {
   },
   'space-unary-ops': {
     fail: [
-      'varhi = "world";',
-      'var hi= "world";',
-      'var hi ="world";',
-      'var bool = ! true;'
+      'i ++;',
+      '-- i;',
+      'delete(foo.bar);',
+      '+ "3"'
     ],
     pass: [
-      'var hi = "world";',
-      'var bool = !true;'
+      '+"3"',
+      'i++'
     ]
   },
   'space-infix-ops': {
@@ -119,19 +119,19 @@ module.exports = {
     pass: [
       'var a = 1;\nvar b = 3;',
       'if (foo) { bar() }',
-      'if (foo) { bar(); }'
+      'var x = function () {\n};'
     ]
   },
   'require-jsdoc': {
-    pass: ['function () {};']
+    pass: ['function foo () {};']
   },
   'operator-linebreak': {
     fail: ['var foo = 1 +\n2;'],
     pass: ['var foo = 1\n+ 2;']
   },
   'operator-assignment': {
-    fail: ['var x = x + 1'],
-    pass: ['var x += 1']
+    fail: ['var x = 0; x = x + 1;'],
+    pass: ['var x = 0; x += 1;']
   },
   'object-property-newline': {
     fail: ['var obj = { key: "value", key1: "value1",\nkey2: "value2"};'],
@@ -148,7 +148,18 @@ module.exports = {
   },
   'object-curly-newline': {
     fail: ['var obj = {\nkey: 1\n}', 'var obj = { key: 1, key2: 2, key3: 3 }'],
-    pass: ['var obj = { key: 1 }', 'var obj = { key: 1,\nkey2: 2}']
+    pass: ['var obj = { key: 1 }', 'var obj = {\nkey: 1,\nkey2: 2\n}']
+  },
+  'one-var-declaration-per-line': null,
+  'one-var': {
+    fail: [
+      'var a;\nvar b;',
+      'var a=1, b=2;'
+    ],
+    pass: [
+      'var a=1;\nvar b=2;',
+      'var a, b, c;'
+    ]
   },
   'no-whitespace-before-property': {
     fail: ['foo [bar]', 'foo. bar'],
@@ -179,11 +190,19 @@ module.exports = {
   },
   'no-negated-condition': null,
   'no-multiple-empty-lines': {
-    fail: ['\nvar x = 1;', 'var x = 1;\n\n', 'var x = 1;\n\n\nvar y = 2;'],
-    pass: ['var x = 1;', 'var x = 1;\n', 'var x = 1;\n\nvar y = 2;']
+    fail: [
+      '\nvar x = 1;',
+      'var x = 1;\n\n\n',
+      'var x = 1;\n\n\n\n\nvar y = 2;'
+    ],
+    pass: [
+      'var x = 1;',
+      'var x = 1;\n',
+      'var x = 1;\n\nvar y = 2;'
+    ]
   },
   'no-mixed-spaces-and-tabs': {
-    fail: ['var x = \t1;'],
+    fail: ['var x = \s\t\s\s1;'],
     pass: ['var x =\t1;', 'var x = 1;']
   },
   'no-mixed-operators': null,
@@ -199,8 +218,8 @@ module.exports = {
   },
   'newline-per-chained-call': {
     fail: [
-      'var _ = require("./u.js");\n_.chain().chain2();',
-      'var _ = require("./u.js");\n_\n.chain({}).prop.prop;'
+      'var _ = require("./u.js");\n_.chain().chain2().chain3();',
+      'var _ = require("./u.js");\n_.chain({}).chain().chain().prop.chain();'
     ],
     pass: [
       'var _ = require("./u.js");\n_\n  .chain()\n  .chain();',
@@ -217,12 +236,12 @@ module.exports = {
     pass: ['var x = 1;\n\nconsole.log(x);']
   },
   'new-parens': {
-    fail: ['var Hapi = new require("hapi").Server\nvar server = Hapi()'],
+    fail: ['var Hapi = new require("hapi")\nvar serv = new Hapi\nvar server = Hapi()'],
     pass: ['var Hapi = require("hapi");\nvar server = new Hapi.Server();']
   },
   'new-cap': {
-    fail: ['var hapi = require("hapi");\nvar server = new hapi.Server();'],
-    pass: ['var Hapi = require("hapi");\nvar Server = new Hapi.Server();']
+    fail: ['var hapi = require("hapi");\nvar server = new hapi();'],
+    pass: ['var Hapi = require("hapi");\nvar Server = new Hapi();']
   },
   'multiline-ternary': null,
   'max-statements': null,
@@ -259,7 +278,7 @@ module.exports = {
     pass: ['if (true) {};']
   },
   'key-spacing': {
-    fail: ['{key :42};'],
-    pass: ['{key: 42};']
+    fail: ['var obj = {key : 42};'],
+    pass: ['var obj = {key: 42};']
   }
 };
