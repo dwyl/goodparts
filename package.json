@@ -1,12 +1,13 @@
 {
   "name": "goodparts",
   "description": "An ESLint Style that only allows JavaScript the Good Parts (and \"Better Parts\") in your codebase.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": ".eslintrc.js",
   "scripts": {
     "test": "tape test/index.js",
     "coverage": "node_modules/.bin/istanbul cover tape test/index.js",
-    "lint": "bin/cmd.js ."
+    "lint": "bin/cmd.js .",
+    "postinstall": "ln -sf $(pwd)/.eslintrc.js $(pwd)/../../.eslintrc.js"
   },
   "devDependencies": {
     "istanbul": "^0.4.5",
