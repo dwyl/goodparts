@@ -1,9 +1,11 @@
+'use strict';
+
 var test = require('tape');
 var eslint = require('eslint');
 var allRules = require('eslint/conf/eslint-all.js').rules;
 
 var testObject = require('./fixtures/');
-var ourRules = require('../rules');
+var ourRules = require('../rules/');
 
 var linter = eslint.linter;
 
@@ -16,41 +18,51 @@ function passesRule (rule, text) {
 }
 
 function ruleNotSet (rule) {
-  return [undefined, 0, 'off'].indexOf(config.rules[rule]) > -1;
+  return [0, 'off'].indexOf(ourRules[rule]) > -1;
 }
 
 function ruleNotConfigured (rule) {
-  return ourRules[rule] === undefined;
+  return typeof ourRules[rule] === 'undefined';
 }
 
 test('Testing All Conifgurable Rules', function (t) {
   Object.keys(allRules).forEach(function (rule) {
-    var fCases;
-    var pCases;
+    var fCases, pCases;
 
     if (ruleNotConfigured(rule)) {
-      return t.fail(rule + ' not configured');
+      t.fail(rule + ' not configured');
+
+      return;
     }
 
-    if ([null, undefined].indexOf(testObject[rule]) > -1) {
-      return t.ok(ruleNotSet, rule + ' not configured');
+    if (testObject[rule] === null) {
+      t.ok(ruleNotSet(rule), rule + ' not configured');
+
+      return;
     }
 
     fCases = testObject[rule].fail;
     pCases = testObject[rule].pass;
 
-    fCases && fCases.forEach(function (text) {
-      t.notOk(passesRule(rule, text), rule + ' fails');
-    });
-    pCases && pCases.forEach(function (text) {
-      t.ok(passesRule(rule, text), rule + ' passes');
-    });
+    if (fCases) {
+      fCases.forEach(function (text) {
+        t.notOk(passesRule(rule, text), rule + ' fails');
+      });
+    }
+
+    if (pCases) {
+      pCases.forEach(function (text) {
+        t.ok(passesRule(rule, text), rule + ' passes');
+      });
+    }
   });
 
   t.end();
 });
 
 test('Testing bin file executes without error', function (t) {
+  /*eslint-disable */
   require('../bin/cmd.js');
+  /*eslint-ensable */
   t.end();
 });

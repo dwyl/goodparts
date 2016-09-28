@@ -1,10 +1,10 @@
+'use strict';
+
 var read = require('../read.js');
 
 module.exports = {
   'yoda': {
-    fail: [
-      'var x = 2; if (1 === x) {console.log(x);}',
-    ],
+    fail: ['var x = 2; if (1 === x) {console.log(x);}'],
     pass: [
       'var x = 2; if (x === 1) {console.log(x);}',
       'var x = 1; if (-1 <= x && x <= 1) {console.log(x);}'
@@ -20,9 +20,9 @@ module.exports = {
     ]
   },
 
-  'no-with': { fail: [ 'var x = {}; with (x) {console.log(x);}' ] },
+  'no-with': { fail: ['var x = {}; with (x) {console.log(x);}'] },
 
-  'no-void': { fail: [ 'void 0;' ] },
+  'no-void': { fail: ['void 0;'] },
 
   'no-unmodified-loop-condition': {
     fail: [
@@ -34,20 +34,21 @@ module.exports = {
       'while (node) { doSomething(node); node--; }'
     ]
   },
-
+  'wrap-iife': {
+    fail: ['(function () {}())'],
+    pass: ['(function () {})()']
+  },
   'no-useless-concat': {
-    fail: [ '\'x\' + \'y\'' ],
-    pass: [ 'var x = \'a\'; var y = x + \'b\';' ]
+    fail: ['\'x\' + \'y\''],
+    pass: ['var x = \'a\'; var y = x + \'b\';']
   },
 
-  'no-unused-labels': { fail: [
-    'A: { var foo = 1; } B: { console.log(foo); }'
-  ], },
+  'no-unused-labels': { fail: ['A: { var foo=1; } B: { console.log(foo); }'] },
 
   'no-sequences': {
     // this is actually a fatal parsing error
-    fail: [ 'var x = 4, 5;'],
-    pass: [ 'var x = (3, 5);' ]
+    fail: ['var x = 4, 5;'],
+    pass: ['var x = (3, 5);']
   },
 
   'no-self-assign': {
@@ -70,20 +71,18 @@ module.exports = {
     ]
   },
 
-  'no-throw-literal': {
-    fail: ['throw 0;', 'throw \'oops\'']
-  },
+  'no-throw-literal': { fail: ['throw 0;', 'throw \'oops\''] },
 
-  'no-proto': { fail: [ 'var x = {}; console.log(x.__proto__);' ] },
+  'no-proto': { fail: ['var x = {}; console.log(x.__proto__);'] },
 
   'no-octal': {
-    fail: [ 'var x = 064;' ],
-    pass: [ 'var x = \'064\';' ]
+    fail: ['var x = 064;'],
+    pass: ['var x = \'064\';']
   },
 
   'no-new': {
-    fail: [ 'var Person = require(\'person\'); new Person();' ],
-    pass: [ 'var Person = require(\'person\'); var x = new Person();' ]
+    fail: ['var Person = require(\'person\'); new Person();'],
+    pass: ['var Person = require(\'person\'); var x = new Person();']
   },
 
   'no-new-func': {
@@ -98,12 +97,12 @@ module.exports = {
   },
 
   'no-multi-spaces': {
-    fail: [ 'var x   = 1;' ], pass: [ 'var x = 1;' ]
+    fail: ['var x   = 1;'], pass: ['var x = 1;']
   },
 
-  'no-loop-func': { fail: [ read('./no-loop-func.fail') ] },
+  'no-loop-func': { fail: [read('./no-loop-func.fail')] },
 
-  'no-labels': { fail: [ 'A: var foo = 1;' ], },
+  'no-labels': { fail: ['A: var foo = 1;'] },
 
   'no-invalid-this': {
     fail: [
@@ -119,11 +118,11 @@ module.exports = {
   },
 
   'no-implicit-globals': {
-    fail: [ 'var x = 1;', 'x = 1' ],
-    pass: [ 'window.foo = 1;', '(function () { var x = 1; })()' ]
+    fail: ['var x = 1;', 'x = 1'],
+    pass: ['window.foo = 1;', '(function () { var x = 1; })()']
   },
 
-  'no-global-assign': { fail: [ 'Object = 1;', 'Math = 1;' ] },
+  'no-global-assign': { fail: ['Object = 1;', 'Math = 1;'] },
 
   'no-fallthrough': {
     fail: [
@@ -131,7 +130,7 @@ module.exports = {
     ],
     pass: [
       'switch (num) { case 1: num + 1; break; case 2: num + 2; break; }'
-    ],
+    ]
   },
 
   'no-extra-bind': {
@@ -145,7 +144,7 @@ module.exports = {
     ]
   },
 
-  'no-eval': { fail: [ 'eval(\'1 + 1\');' ] },
+  'no-eval': { fail: ['eval(\'1 + 1\');'] },
 
   // this is an ES6 feature, so will cause a fatal error with ecmaVersion: 5
   'no-empty-pattern': { fail: [] },
@@ -169,7 +168,7 @@ module.exports = {
     ]
   },
 
-  'no-alert': { fail: [ 'alert(\'Hello!\')' ] },
+  'no-alert': { fail: ['alert(\'Hello!\')'] },
 
   'eqeqeq': {
     fail: [
@@ -187,8 +186,7 @@ module.exports = {
       read('./dot-location.fail')
     ],
     pass: [
-      'foo\
-        .prop();',
+      'foo\n.prop();',
       'foo.prop;'
     ]
   },
@@ -196,30 +194,27 @@ module.exports = {
   'curly': {
     fail: [
       'if (true) foo();',
-      'while (bar)\
-        foo();'
+      'while (bar)\nfoo();'
     ],
     pass: [
       'if (true) {foo();}',
       'while (bar) { foo(); }',
-      'if (baz) {\
-        foo();\
-      }'
+      'if (baz) {\nfoo();\n}'
     ]
   },
 
-  'complexity': { fail: [ read('./complexity.fail') ] },
+  'complexity': { fail: [read('./complexity.fail')] },
 
   'block-scoped-var': {
-    fail: [ 'if (true) {var foo = 1;} console.log(foo);',
-      'if (foo) {var bar = 2;} else {var bar = 3;}' ],
-    pass: [ 'var foo; if (true) {foo = 1;} console.log(foo);',
-      'var bar; if (foo) {bar = 2;} else {bar = 3;}' ]
+    fail: ['if (true) {var foo = 1;} console.log(foo);',
+      'if (foo) {var bar = 2;} else {var bar = 3;}'],
+    pass: ['var foo; if (true) {foo = 1;} console.log(foo);',
+      'var bar; if (foo) {bar = 2;} else {bar = 3;}']
   },
 
   'accessor-pairs': {
-    fail: [ read('./accessor-pairs.fail') ],
-    pass: [ read('./accessor-pairs.pass') ]
+    fail: [read('./accessor-pairs.fail')],
+    pass: [read('./accessor-pairs.pass')]
   },
   'array-callback-return': { fail: ['[1].map(function(x){ console.log(x)})'] },
   'class-methods-use-this': null,
@@ -255,5 +250,5 @@ module.exports = {
   'no-useless-call': { fail: ['foo.call(null, 1, 2, 3);'] },
   'no-useless-escape': { fail: ['"\\a";'] },
   'no-warning-comments': null,
-  'radix': { fail: ['var num = parseInt("071'] },
+  'radix': { fail: ['var num = parseInt("071'] }
 };

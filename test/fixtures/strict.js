@@ -1,7 +1,7 @@
-var read = require('../read.js');
+'use strict';
 
 module.exports = {
-  'strict': {
+  strict: {
     fail: ['function foo () {}'],
     pass: ['function foo () {\'use strict\';}']
   }

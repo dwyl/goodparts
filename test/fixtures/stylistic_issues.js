@@ -1,10 +1,8 @@
+'use strict';
+
 var read = require('../read.js');
 
 module.exports = {
-  'space-infix-ops': {
-    fail: ['var a = 1+ 2;'],
-    pass: ['var a = 1 + 2;']
-  },
   'array-bracket-spacing': {
     fail: ['[ 1, 2, 3 ]'],
     pass: ['[1, 2, 3]']
@@ -83,9 +81,7 @@ module.exports = {
     pass: ['// yes!']
   },
   'wrap-regex': null,
-  'unicode-bom': {
-    pass: ['U+FEFF\nvar abc;', 'var abc;']
-  },
+  'unicode-bom': { pass: ['U+FEFF\nvar abc;', 'var abc;'] },
   'space-unary-ops': {
     fail: [
       'i ++;',
@@ -122,8 +118,16 @@ module.exports = {
       'var x = function () {\n};'
     ]
   },
-  'require-jsdoc': {
-    pass: ['function foo () {};']
+  'require-jsdoc': { pass: ['function foo () {};'] },
+  'lines-around-comment': null,
+  'linebreak-style': {
+    fail: ['var a = "a";\r\n'],
+    pass: ['var a = "a";\n']
+  },
+  'line-comment-position': null,
+  'no-continue': {
+    fail: ['var sum = 0, i;\n\nfor(i = 0; i < 10; i++) {\nif(i >= 5) {\ncontinue;\n}\na += i;\n}'],
+    pass: ['var sum = 0, i;\nfor(i = 0; i < 10; i++) {\nif(i < 5) {\na += i;\n}\n}']
   },
   'operator-linebreak': {
     fail: ['var foo = 1 +\n2;'],
@@ -185,9 +189,7 @@ module.exports = {
     fail: ['var obj = new Object();'],
     pass: ['var obj = {};']
   },
-  'no-nested-ternary': {
-    pass: ['var x = true ? "foo" : true ? "bar" : "baz"']
-  },
+  'no-nested-ternary': { pass: ['var x =true ? "foo" : true ? "bar" : "baz"'] },
   'no-negated-condition': null,
   'no-multiple-empty-lines': {
     fail: [
@@ -202,8 +204,8 @@ module.exports = {
     ]
   },
   'no-mixed-spaces-and-tabs': {
-    fail: ['var x = \s\t\s\s1;'],
-    pass: ['var x =\t1;', 'var x = 1;']
+    fail: ['function foo () {\tvar x = 1,\n\t   y = 1;}'],
+    pass: ['function foo () {\tvar x = 1;\n\tvar y = 1;}']
   },
   'no-mixed-operators': null,
   'no-lonely-if': {
@@ -236,7 +238,7 @@ module.exports = {
     pass: ['var x = 1;\n\nconsole.log(x);']
   },
   'new-parens': {
-    fail: ['var Hapi = new require("hapi")\nvar serv = new Hapi\nvar server = Hapi()'],
+    fail: ['var serv = new Hapi\nvar server = Hapi()'],
     pass: ['var Hapi = require("hapi");\nvar server = new Hapi.Server();']
   },
   'new-cap': {
@@ -263,15 +265,21 @@ module.exports = {
   },
   'max-len': {
     fail: [read('./max-len.fail0'), read('./max-len.fail1')],
-    pass: [read('./max-len.pass0'), read('./max-len.pass1')],
+    pass: [read('./max-len.pass0'), read('./max-len.pass1')]
   },
   'max-depth': {
     fail: [read('./max-depth.fail')],
     pass: [read('./max-depth.pass')]
   },
   'lines-around-directive': {
-    fail: [read('./lines-around-directive.fail0'), read('./lines-around-directive.fail0')],
-    pass: [read('./lines-around-directive.pass0'), read('./lines-around-directive.pass1')]
+    fail: [
+      read('./lines-around-directive.fail0'),
+      read('./lines-around-directive.fail0')
+    ],
+    pass: [
+      read('./lines-around-directive.pass0'),
+      read('./lines-around-directive.pass1')
+    ]
   },
   'keyword-spacing': {
     fail: ['if(true){};'],

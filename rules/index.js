@@ -1,3 +1,5 @@
+'use strict';
+
 var bestPractices = require('./best_practices');
 var nodeCommonJs = require('./node_common_js');
 var possibleErrors = require('./possible_errors');
