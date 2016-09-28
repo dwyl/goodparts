@@ -7,7 +7,8 @@
     "test": "tape test/index.js",
     "coverage": "node_modules/.bin/istanbul cover tape test/index.js",
     "lint": "bin/cmd.js .",
-    "lint:fix": "bin/cmd.js . --fix"
+    "lint:fix": "bin/cmd.js . --fix",
+    "postinstall": "ln -sf $(pwd)/.eslintrc.js $(pwd)/../../.eslintrc.js"
   },
   "devDependencies": {
     "istanbul": "^0.4.5",
