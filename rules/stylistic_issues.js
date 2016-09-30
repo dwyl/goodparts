@@ -70,7 +70,7 @@ module.exports = {
   'object-curly-spacing': [2, 'always', {
     objectsInObjects: true, arraysInObjects: true
   }], // https://github.com/dwyl/goodparts/issues/86
-  'object-curly-newline': [2, { minProperties: 2 }], // https://github.com/dwyl/goodparts/issues/100
+  'object-curly-newline': [2, { multiline: true }], // https://github.com/dwyl/goodparts/issues/100
   'no-whitespace-before-property': 2, // https://github.com/dwyl/goodparts/issues/101
   'no-unneeded-ternary': [2, { defaultAssignment: false }], // https://github.com/dwyl/goodparts/issues/102
   'no-underscore-dangle': 0, // https://github.com/dwyl/goodparts/issues/103

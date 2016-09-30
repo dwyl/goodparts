@@ -148,11 +148,21 @@ module.exports = {
       'var obj = {key: value }',
       'var obj = { key: [ 1, 2 ]}'
     ],
-    pass: ['var obj = { key: value };', 'var obj = { key: [ 1, 2 ] };']
+    pass: [
+      'var obj = { key: value };',
+      'var obj = { key: [ 1, 2 ] };'
+    ]
   },
   'object-curly-newline': {
-    fail: ['var obj = {\nkey: 1\n}', 'var obj = { key: 1, key2: 2, key3: 3 }'],
-    pass: ['var obj = { key: 1 }', 'var obj = {\nkey: 1,\nkey2: 2\n}']
+    fail: [
+      'var obj = {\na: 1\n}',
+      'var obj = {\nsame: "line", two: "keys"\n}'
+    ],
+    pass: [
+      'var obj = { key: 1 }',
+      'var obj = {\nkey: 1,\nkey2: 2\n}',
+      'var obj = { key: 1, key2: 2, key3: 3 }'
+    ]
   },
   'one-var-declaration-per-line': null,
   'one-var': {
