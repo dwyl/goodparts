@@ -69,6 +69,7 @@ Then you can add the following script to your `package.json`:
 
 <br />
 
+## See the discussion we've had on each issue [here](https://github.com/dwyl/goodparts/wiki/Rules-Contents-page)
 
 ## (*Frequently Asked*) Questions?
 
