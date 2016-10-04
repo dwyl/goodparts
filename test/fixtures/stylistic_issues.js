@@ -15,10 +15,7 @@ module.exports = {
     fail: [read('brace-style.fail')],
     pass: [read('brace-style.pass')]
   },
-  'camelcase': {
-    fail: ['var camel_case = 42;'],
-    pass: ['var camelCase = 42;']
-  },
+  'camelcase': null,
   'comma-style': {
     fail: [read('comma-style.fail')],
     pass: [read('comma-style.pass')]
