@@ -5,7 +5,7 @@ module.exports = {
   'array-bracket-spacing': [2, 'never'], // https://github.com/dwyl/goodparts/issues/219
   'block-spacing': 2, // https://github.com/dwyl/goodparts/issues/218
   'brace-style': [2, '1tbs', { allowSingleLine: true }], // https://github.com/dwyl/goodparts/issues/217
-  'camelcase': 2, // https://github.com/dwyl/goodparts/issues/216
+  'camelcase': 0, // https://github.com/dwyl/goodparts/issues/216
   'comma-style': [2, 'last'], // https://github.com/dwyl/goodparts/issues/215
   'comma-spacing': [2, {
     before: false, after: true
