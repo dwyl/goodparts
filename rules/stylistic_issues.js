@@ -118,5 +118,6 @@ module.exports = {
     beforeColon: false, afterColon: true, mode: 'strict'
   }], // https://github.com/dwyl/goodparts/issues/198
   'no-restricted-syntax': 0, // https://github.com/dwyl/goodparts/issues/111
-  'no-continue': 2 // https://github.com/dwyl/goodparts/issues/162
+  'no-continue': 2, // https://github.com/dwyl/goodparts/issues/162,
+  'func-name-matching': 2 // https://github.com/dwyl/goodparts/issues/256
 };

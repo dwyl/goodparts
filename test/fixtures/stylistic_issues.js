@@ -295,5 +295,9 @@ module.exports = {
   'key-spacing': {
     fail: ['var obj = {key : 42};'],
     pass: ['var obj = {key: 42};']
+  },
+  'func-name-matching': {
+    fail: ['var bar = function foo () {return 42;};'],
+    pass: ['var bar = function bar () {return 42;};']
   }
 };
