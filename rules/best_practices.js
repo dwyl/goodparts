@@ -66,5 +66,5 @@ module.exports = {
   'no-warning-comments': 'off', // https://github.com/dwyl/goodparts/issues/117
   'radix': ['error', 'always'], // https://github.com/dwyl/goodparts/issues/118
   'wrap-iife': ['error', 'inside'], // https://github.com/dwyl/goodparts/issues/124
-  'no-useless-return': 'error'
+  'no-useless-return': 'error' // https://github.com/dwyl/goodparts/issues/261
 };
