@@ -2,11 +2,13 @@
 
 module.exports = {
   'valid-jsdoc': [
-    2, { prefer: {
-      arg: 'param',
-      argument: 'param',
-      return: 'returns'
-    } }
+    2, {
+      prefer: {
+        arg: 'param',
+        argument: 'param',
+        return: 'returns'
+      }
+    }
   ], // https://github.com/dwyl/goodparts/issues/56
   'no-irregular-whitespace': [2, {
     skipStrings: true,
