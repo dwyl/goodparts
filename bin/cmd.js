@@ -20,3 +20,10 @@ if (shouldFix) {
 }
 
 console.log(cli.getFormatter()(report.results)); // eslint-disable-line
+
+// End with exit code 1 if there are errors
+// Use process.exit instead of throwing to mimic the behaviour of eslints bin
+// We don't want a stacktrace, it would just be confusing
+if (report.errorCount) {
+    process.exit(1); // eslint-disable-line
+}
