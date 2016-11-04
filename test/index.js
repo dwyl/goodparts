@@ -59,10 +59,3 @@ test('Testing All Conifgurable Rules', function (t) {
 
   t.end();
 });
-
-test('Testing bin file executes without error', function (t) {
-  /*eslint-disable */
-  require('../bin/cmd.js');
-  /*eslint-ensable */
-  t.end();
-});
