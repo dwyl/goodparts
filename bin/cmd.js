@@ -3,13 +3,15 @@
 
 var path = require('path');
 var eslint = require('eslint');
+var parse = require('minimist');
 
 var configFilePath = path.resolve(__dirname, '..', '.eslintrc.js');
 var cli, report;
 
-var dir = process.argv.slice(2, 3);
-var flags = process.argv.slice(3);
-var shouldFix = flags.indexOf('--fix') > -1;
+var args = parse(process.argv.slice(2));
+var dir = args._.slice(0, 1);
+
+var shouldFix = args.hasOwnProperty('fix');
 
 cli = new eslint.CLIEngine({ configFile: configFilePath, fix: shouldFix });
 
