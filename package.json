@@ -15,7 +15,8 @@
     "tape": "^4.6.0"
   },
   "dependencies": {
-    "eslint": "^3.9.1"
+    "eslint": "^3.9.1",
+    "minimist": "^1.2.0"
   },
   "bin": "./bin/cmd.js",
   "contributors": [
