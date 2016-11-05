@@ -42,3 +42,38 @@ test('cli creates a symlink file when called with "--link"', function (t) {
     t.end();
   });
 });
+
+test('cli outputs fixes when called with "--fix"', function (t) {
+  var source = path.resolve(__dirname, '..', 'fixtures', 'ident.fail.js');
+  var target = path.join(__dirname, 'dummy.js');
+
+  function getProblems (stdout) {
+    var pattern = /(\d+) problems \(\d+ errors, \d+ warnings\)/;
+    var matches = stdout.match(pattern);
+
+    return matches && matches.length > 1
+      ? Number(matches[1])
+      : 0;
+  }
+
+  utils.copyFile(source, target);
+
+  exec('./bin/cmd.js ./test/bin', function (err, stdout, stderr) {
+    var problemsNoFix = getProblems(stdout);
+
+    t.ok(problemsNoFix, 'Expect errors to be output to stdout');
+    t.equal(err.code, 1, 'Expect process to exit with code 1');
+    t.notOk(stderr, 'Expect nothing logged to stderr');
+
+    exec('./bin/cmd.js ./test/bin --fix', function (_err, _stdout, _stderr) {
+      var problemsFix = getProblems(_stdout);
+
+      t.ok(problemsFix < problemsNoFix, 'Expect --fix to fix some issues');
+      t.equal(_err.code, 1, 'Expect process to exit with code 1');
+      t.notOk(_stderr, 'Expect nothing logged to stderr');
+
+      utils.deleteFile(target);
+      t.end();
+    });
+  });
+});
