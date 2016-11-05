@@ -28,3 +28,17 @@ test('cli exits with code 1 when there are errors', function (t) {
     t.end();
   });
 });
+
+test('cli creates a symlink file when called with "--link"', function (t) {
+  exec('./bin/cmd.js ./test/bin --link', function (err, stdout, stderr) {
+    t.notOk(err, 'Expect no errors thrown');
+    t.notOk(stderr, 'Expect nothing logged to stderr');
+    t.ok(
+      /Successfully symlinked .eslintrc.js to /.test(stdout),
+      'Expect success message in stdout'
+    );
+
+    utils.deleteFile(path.join(__dirname, '.eslintrc.js'));
+    t.end();
+  });
+});
