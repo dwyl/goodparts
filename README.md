@@ -69,6 +69,12 @@ Then you can add the following script to your `package.json`:
 }
 ```
 
+**Pre Commit Hook** If you would like to add pre-commit check that your linting is up to scratch:
+`npm i -D pre-commit`
+
+And add the following line to your `package.json` `"pre-commit": ["lint"]` as well as your `"lint"` script mentioned above
+
+
 <br />
 
 ## See the discussion we've had on each issue [here](https://github.com/dwyl/goodparts/wiki/Rules-Contents-page)
