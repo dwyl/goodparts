@@ -5,7 +5,7 @@
   "main": ".eslintrc.js",
   "scripts": {
     "test": "tape test/index.js test/**/*.test.js",
-    "coverage": "node_modules/.bin/istanbul cover tape test/index.js",
+    "coverage": "istanbul cover tape test/index.js test/**/*.test.js",
     "lint": "bin/cmd.js .",
     "lint:fix": "bin/cmd.js . --fix"
   },
