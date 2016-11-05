@@ -63,17 +63,24 @@ Simply install our configuration
 $ npm i --save-dev goodparts
 ```
 Then you can add the following script to your `package.json`:
-```
+```json
 {
   "lint": "node_modules/.bin/goodparts path/to/files/for/linting"
 }
 ```
 
-**Pre Commit Hook** If you would like to add pre-commit check that your linting is up to scratch:
-`npm i -D pre-commit`
+**Pre Commit Hook**
 
-And add the following line to your `package.json` `"pre-commit": ["lint"]` as well as your `"lint"` script mentioned above
-
+If you would like to add a pre-commit hook to check that your linting is up to scratch:
+```
+$ npm i -D pre-commit
+```
+Then, assuming you have added the `lint` script described above, add the following line to your `package.json`:
+```json
+{
+  "pre-commit": ["lint"]
+}
+```
 
 <br />
 
