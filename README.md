@@ -63,7 +63,7 @@ Simply install our configuration
 $ npm i --save-dev goodparts
 ```
 Then you can add the following script to your `package.json`:
-```
+```json
 {
   "lint": "node_modules/.bin/goodparts path/to/files/for/linting"
 }
@@ -77,6 +77,19 @@ While we're working on an [atom plugin](https://github.com/dwyl/goodparts/issues
 $ node_modules/.bin/goodparts /path/to/dir --link
 ```
 This will create a symlink to the goodparts configuration file at `/path/to/dir/.eslintrc.js`, which we reccommend you git-ignore for now.
+
+**Pre Commit Hook**
+
+If you would like to add a pre-commit hook to check that your linting is up to scratch:
+```
+$ npm i -D pre-commit
+```
+Then, assuming you have added the `lint` script described above, add the following line to your `package.json`:
+```json
+{
+  "pre-commit": ["lint"]
+}
+```
 
 <br />
 
