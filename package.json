@@ -5,10 +5,9 @@
   "main": ".eslintrc.js",
   "scripts": {
     "test": "tape test/index.js test/**/*.test.js",
-    "coverage": "node_modules/.bin/istanbul cover tape test/index.js",
+    "coverage": "istanbul cover tape test/index.js test/**/*.test.js",
     "lint": "bin/cmd.js .",
-    "lint:fix": "bin/cmd.js . --fix",
-    "postinstall": "ln -sf \"$(pwd)\"/.eslintrc.js \"$(pwd)\"/../../.eslintrc.js"
+    "lint:fix": "bin/cmd.js . --fix"
   },
   "devDependencies": {
     "istanbul": "^0.4.5",
