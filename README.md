@@ -82,8 +82,10 @@ in your Node.js/JS project:
 ```
 $ npm install goodparts --save-dev
 ```
+
 Then add the following script to your `package.json`:
-```
+
+```json
 {
   "lint": "node_modules/.bin/goodparts path/to/files/for/linting"
 }
@@ -98,6 +100,32 @@ npm run lint
 You should _either_ see
 
 or you should see
+
+### Autofix
+
+The `goodparts` command line tool supports `eslint`'s autofix flag `--fix`. Not all errors can be autofixed, but a great deal can, simply with:
+
+```
+$ node_modules/.bin/goodparts /path/to/dir --fix
+```
+While we're working on an [atom plugin](https://github.com/dwyl/goodparts/issues/243), you can still use `goodparts` to lint your code in your editor using the `linter-eslint` plugin for atom. To do this, you need a `.eslintrc.js` file in your project that reflects the `goodparts` configuration. Luckily we have a command line option for this too! Simply run:
+```
+$ node_modules/.bin/goodparts /path/to/dir --link
+```
+This will create a symlink to the goodparts configuration file at `/path/to/dir/.eslintrc.js`, which we reccommend you git-ignore for now.
+
+**Pre Commit Hook**
+
+If you would like to add a pre-commit hook to check that your linting is up to scratch:
+```
+$ npm i -D pre-commit
+```
+Then, assuming you have added the `lint` script described above, add the following line to your `package.json`:
+```json
+{
+  "pre-commit": ["lint"]
+}
+```
 
 <br />
 

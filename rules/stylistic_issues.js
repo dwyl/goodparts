@@ -7,9 +7,7 @@ module.exports = {
   'brace-style': [2, '1tbs', { allowSingleLine: true }], // https://github.com/dwyl/goodparts/issues/217
   'camelcase': 0, // https://github.com/dwyl/goodparts/issues/216
   'comma-style': [2, 'last'], // https://github.com/dwyl/goodparts/issues/215
-  'comma-spacing': [2, {
-    before: false, after: true
-  }], // https://github.com/dwyl/goodparts/issues/214
+  'comma-spacing': [2, { before: false, after: true }], // https://github.com/dwyl/goodparts/issues/214
   'comma-dangle': [2, 'never'], // https://github.com/dwyl/goodparts/issues/213
   'computed-property-spacing': [2, 'never'], // https://github.com/dwyl/goodparts/issues/212
   'consistent-this': 0, // https://github.com/dwyl/goodparts/issues/211
@@ -24,12 +22,8 @@ module.exports = {
   'jsx-quotes': 0, // https://github.com/dwyl/goodparts/issues/199
   'padded-blocks': [2, 'never'], // https://github.com/dwyl/goodparts/issues/55
   'quote-props': [2, 'consistent-as-needed', { keywords: false }], // https://github.com/dwyl/goodparts/issues/54
-  'quotes': [2, 'single', {
-    avoidEscape: false, allowTemplateLiterals: false
-  }], // https://github.com/dwyl/goodparts/issues/53
-  'semi-spacing': [2, {
-    before: false, after: true
-  }], // https://github.com/dwyl/goodparts/issues/50
+  'quotes': [2, 'single', { avoidEscape: false, allowTemplateLiterals: false }], // https://github.com/dwyl/goodparts/issues/53
+  'semi-spacing': [2, { before: false, after: true }], // https://github.com/dwyl/goodparts/issues/50
   'sort-keys': 0, // https://github.com/dwyl/goodparts/issues/39
   'sort-vars': 0, // https://github.com/dwyl/goodparts/issues/38
   'space-in-parens': [2, 'never'], // https://github.com/dwyl/goodparts/issues/34
@@ -55,21 +49,19 @@ module.exports = {
     anonymous: 'always',
     named: 'always'
   }], // https://github.com/dwyl/goodparts/issues/36
-  'space-before-blocks': [2, {
-    functions: 'always', keywords: 'always'
-  }], // https://github.com/dwyl/goodparts/issues/37
+  'space-before-blocks': [2, { functions: 'always', keywords: 'always' }], // https://github.com/dwyl/goodparts/issues/37
   'semi': [2, 'always', { omitLastInOneLineBlock: true }], // https://github.com/dwyl/goodparts/issues/49
   'require-jsdoc': 0, // https://github.com/dwyl/goodparts/issues/51
   'operator-linebreak': [2, 'before'], // http://eslint.org/docs/rules/operator-linebreak
   'operator-assignment': [2, 'always'], // https://github.com/dwyl/goodparts/issues/76
   'one-var-declaration-per-line': 0,
-  'one-var': [2, {
-    initialized: 'never', uninitialized: 'always'
-  }],
+  'one-var': [2, { initialized: 'never', uninitialized: 'always' }],
   'object-property-newline': [2, { allowMultiplePropertiesPerLine: true }], // https://github.com/dwyl/goodparts/issues/85
-  'object-curly-spacing': [2, 'always', {
-    objectsInObjects: true, arraysInObjects: true
-  }], // https://github.com/dwyl/goodparts/issues/86
+  'object-curly-spacing': [
+    2,
+    'always',
+    { objectsInObjects: true, arraysInObjects: true }
+  ], // https://github.com/dwyl/goodparts/issues/86
   'object-curly-newline': [2, { multiline: true }], // https://github.com/dwyl/goodparts/issues/100
   'no-whitespace-before-property': 2, // https://github.com/dwyl/goodparts/issues/101
   'no-unneeded-ternary': [2, { defaultAssignment: false }], // https://github.com/dwyl/goodparts/issues/102
@@ -82,9 +74,7 @@ module.exports = {
   'no-new-object': 2, // https://github.com/dwyl/goodparts/issues/123
   'no-nested-ternary': 0, // https://github.com/dwyl/goodparts/issues/127
   'no-negated-condition': 0, // https://github.com/dwyl/goodparts/issues/145
-  'no-multiple-empty-lines': [2, {
-    max: 2, maxBOF: 0, maxEOF: 1
-  }], // https://github.com/dwyl/goodparts/issues/148
+  'no-multiple-empty-lines': [2, { max: 2, maxBOF: 0, maxEOF: 1 }], // https://github.com/dwyl/goodparts/issues/148
   'no-mixed-spaces-and-tabs': 2, // https://github.com/dwyl/goodparts/issues/149
   'no-mixed-operators': 0, // https://github.com/dwyl/goodparts/issues/155
   'no-lonely-if': 2, // https://github.com/dwyl/goodparts/issues/160
@@ -101,22 +91,14 @@ module.exports = {
   'max-statements-per-line': [2, { max: 1 }], // https://github.com/dwyl/goodparts/issues/176
   'max-params': [2, 5], // https://github.com/dwyl/goodparts/issues/177
   'max-nested-callbacks': [2, 4], // https://github.com/dwyl/goodparts/issues/184
-  'max-lines': [2, {
-    max: 300, skipComments: true
-  }], // https://github.com/dwyl/goodparts/issues/185
+  'max-lines': [2, { max: 300, skipComments: true }], // https://github.com/dwyl/goodparts/issues/185
   'max-depth': [2, 4], // https://github.com/dwyl/goodparts/issues/187
-  'lines-around-directive': [2, {
-    before: 'never', after: 'always'
-  }], // https://github.com/dwyl/goodparts/issues/193
+  'lines-around-directive': [2, { before: 'never', after: 'always' }], // https://github.com/dwyl/goodparts/issues/193
   'lines-around-comment': 0, // https://github.com/dwyl/goodparts/issues/194
   'linebreak-style': [2, 'unix'], // https://github.com/dwyl/goodparts/issues/195
   'line-comment-position': 0, // https://github.com/dwyl/goodparts/issues/196
-  'keyword-spacing': [2, {
-    before: true, after: true
-  }], // https://github.com/dwyl/goodparts/issues/197
-  'key-spacing': [2, {
-    beforeColon: false, afterColon: true, mode: 'strict'
-  }], // https://github.com/dwyl/goodparts/issues/198
+  'keyword-spacing': [2, { before: true, after: true }], // https://github.com/dwyl/goodparts/issues/197
+  'key-spacing': [2, { beforeColon: false, afterColon: true, mode: 'strict' }], // https://github.com/dwyl/goodparts/issues/198
   'no-restricted-syntax': 0, // https://github.com/dwyl/goodparts/issues/111
   'no-continue': 2, // https://github.com/dwyl/goodparts/issues/162,
   'func-name-matching': 2 // https://github.com/dwyl/goodparts/issues/256

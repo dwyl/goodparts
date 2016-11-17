@@ -8,9 +8,7 @@ module.exports = {
   'no-process-env': 'off', // https://github.com/dwyl/goodparts/issues/134
   'no-path-concat': 'error', // https://github.com/dwyl/goodparts/issues/132
   'no-new-require': 'error', // https://github.com/dwyl/goodparts/issues/129
-  'no-mixed-requires': ['error', {
-    grouping: true, allowCall: false
-  }], // https://github.com/dwyl/goodparts/issues/126
+  'no-mixed-requires': ['error', { grouping: true, allowCall: false }], // https://github.com/dwyl/goodparts/issues/126
   // https://github.com/dwyl/goodparts/issues/121
   'handle-callback-err': ['error', '^(error|err\d*)$'], // eslint-disable-line
   'global-require': 'error', // https://github.com/dwyl/goodparts/issues/119
