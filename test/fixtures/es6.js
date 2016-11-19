@@ -13,6 +13,7 @@ module.exports = {
   'no-duplicate-imports': null,
   'no-new-symbol': null,
   'no-restricted-imports': null,
+  'no-return-await': null,
   'no-this-before-super': null,
   'no-useless-computed-key': null,
   'no-useless-constructor': null,
