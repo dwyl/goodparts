@@ -26,6 +26,10 @@
     "eslint": "^3.9.1",
     "minimist": "^1.2.0"
   },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
   "bin": "./bin/cmd.js",
   "contributors": [
     "eliascodes",
