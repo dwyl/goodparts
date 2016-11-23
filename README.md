@@ -239,7 +239,7 @@ https://www.nngroup.com/articles/legibility-readability-comprehension/
 
 When you see someone _trying_ to use ***all*** the
 ***latest features*** of **ECMAScript 2015**,
-its clear they are just trying to *look* smart to their piers
+its clear they are just trying to *look* smart to their peers
 and have not stopped to think/ask:
 + "_will this code **work everywhere**_?"
 + "_did the **users** ask me to use this (new) language feature_?
