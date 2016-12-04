@@ -156,6 +156,20 @@ Then, assuming you have added the `lint` script described above, add the followi
 }
 ```
 
+## Repo Badge ? [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")
+
+
+If you use `goodparts` to lint your code and want to let other people know,
+you can add this badge in your repo:
+
+```js
+[![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")
+
+```
+
+> If you want to know more about "Badges" see: https://github.com/dwyl/repo-badges
+
+
 <br />
 
 ## See the discussion we've had on each issue [here](https://github.com/dwyl/goodparts/wiki/Rules-Contents-page)
