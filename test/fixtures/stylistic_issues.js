@@ -33,6 +33,7 @@ module.exports = {
     pass: ['obj["foo"];']
   },
   'consistent-this': null,
+  'capitalized-comments': null, // https://github.com/dwyl/goodparts/issues/278
   'eol-last': {
     fail: [read('eol.fail')],
     pass: [read('eol.pass')]

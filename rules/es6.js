@@ -28,6 +28,7 @@ module.exports = {
   'prefer-spread': 'off',
   'prefer-template': 'off',
   'require-yield': 'off',
+  'require-await': 'off', // https://github.com/dwyl/goodparts/issues/277
   'rest-spread-spacing': 'off',
   'sort-imports': 'off',
   'symbol-description': 'off',
