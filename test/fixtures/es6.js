@@ -27,6 +27,7 @@ module.exports = {
   'prefer-rest-params': null,
   'prefer-spread': null,
   'prefer-template': null,
+  'require-await': null, // https://github.com/dwyl/goodparts/issues/277
   'require-yield': null,
   'rest-spread-spacing': null,
   'sort-imports': null,

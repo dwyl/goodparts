@@ -1,31 +1,37 @@
-# goodparts [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/good-parts/issues) [![Travis](https://img.shields.io/travis/dwyl/goodparts.svg?maxAge=2592000)](https://travis-ci.org/dwyl/goodparts)
+# `goodparts`
+
+An ESLint Plugin that _only_ allows **JavaScript the _Good_ Parts**  <br />
+(_and "**Better Parts**"_) in your code so you can _ship more **reliable code**_.
+
+[![Travis](https://img.shields.io/travis/dwyl/goodparts.svg?maxAge=2592000)](https://travis-ci.org/dwyl/goodparts)
 [![dependencies Status](https://david-dm.org/dwyl/goodparts/status.svg)](https://david-dm.org/dwyl/goodparts)
 [![devDependencies Status](https://david-dm.org/dwyl/goodparts/dev-status.svg)](https://david-dm.org/dwyl/goodparts?type=dev)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/good-parts/issues)
+[![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")
 
-An ESLint Style that _only_ allows JavaScript the ***Good Parts*** (*and "Better Parts"*) in your code you can sleep at night.
+
 
 ## *Why?*
 
-Because this is the _best_ way we know how to write consistent,
-predictable and error free JavaScript code.
+Using JavaScript "**The _Good_ Parts**" (_abreviated to **`"goodparts"`**_)
+is the _best_ way we know <br />
+how to write _simple_, _consistent_,
+_predictable_ and 100% cross-browser-compatible JavaScript code.
 
-Our ***guiding principal*** is:
+The ***guiding principal*** of `goodparts` is:
 
 > "***perfection*** *is* ***attained*** *not when there is nothing more to add,  
 > but when there is* ***nothing more to remove***" ~
 [Antoine de Saint-Exupéry](http://en.wikiquote.org/wiki/Antoine_de_Saint_Exup%C3%A9ry#Quotes)
 
-we subscribe to the "_code is for **humans** to read_" idea:
+We _agree_ that "_code is for **humans** to read_":
 
-> "_**Programs must be written for people to read**, and only incidentally for machines to execute._" ~ Harold Abelson
+> "_**Programs must be written for people to read**, <br />
+and only incidentally for machines to execute._" ~ Harold Abelson
 
-> "_Any fool can write code that a computer can understand.
+> "_Any fool can write code that a computer can understand. <br />
 **Good programmers write code** that **humans** can
 **understand**._" ~ Martin Fowler
-
-Also, we agree with:
-
-> "_**constraints** can actually **boost creativity**_". [Martin Villeneuve](https://www.ted.com/talks/martin_villeneuve_how_i_made_an_impossible_film)
 
 The 3 biggest advantages of using `goodparts` in your code:
 
@@ -33,50 +39,109 @@ The 3 biggest advantages of using `goodparts` in your code:
 people reading your code can get to the heart of what it *does*
 rather than waste time trying to understand
 how its been written.
-2. [***Shoshin***](https://en.wikipedia.org/wiki/Shoshin) - using _fewer_ JS features
-also means a _complete_ beginner has _less_ to learn before
-they _understand_ your code. This is _essential_ in Open Source
-if you want to make something that _anyone_ can use/modify/extend.
-3. [***Portability***](https://en.wikipedia.org/wiki/Software_portability) -
+2. [***Portability***](https://en.wikipedia.org/wiki/Software_portability) -
 "Old" Browsers/Devices are a _fact_, even if it's "*only a small percentage*"
 of people, we _chose_ to
 [*empathize*](http://www.merriam-webster.com/dictionary/empathize)
 with them by writing code that ***Works Everywhere***<sup>TM</sup>.
-
+3. ***Beginner-friendlyness*** or [***Shoshin***](https://en.wikipedia.org/wiki/Shoshin) - using _fewer_ JS features
+also means a _complete_ beginner has _less_ to learn before
+they _understand_ your code. This is _essential_ in Open Source
+if you want to make something that _anyone_ can use/modify/extend.
 
 ## *What?*
 
-A one-line install that will ensure your project's code works everywhere.
-(_or your money back!_)
+`goodparts` is a "[linter](https://en.wikipedia.org/wiki/Lint_%28software%29)"
+that _ensures_ your project's JavaScript code <br >
+only contains the _subset_ of JavaScript known as "**The _Good_ Parts**". <br />
+This _**guarantees**_ that
+your code ***works everywhere***. (_or your money back!_)
 
 
+### What _are_ "**The _Good_ Parts**"
+
+> If you are _unfamiliar_ with JavaScript "**The _Good_ Parts**"
+or need a _refresher_, <br />
+please see @iteles' notes: [github.com/iteles/Javascript-the-**_Good_**-**Parts**-_**notes**_](https://github.com/iteles/Javascript-the-Good-Parts-notes)
+
+There are _several_ videos where Douglas Crockford covers
+the Why? What? and How? <br />
+of JavaScript "**The _Good_ Parts**"
+see: https://github.com/dwyl/goodparts/#videos
+
+<!-- do we need this?
 ### *What is ESLint?*
 
 ESLint is a Linting tool started by Nicholas C. Zakas,
 it has become the _defacto_ linter in the JS community. see:
 http://eslint.org/docs/about/
-
+-->
 
 ## *How?*
-Simply install our configuration
+
+First _install_ the [**NPM Package**](https://www.npmjs.com/package/goodparts)
+in your Node.js/JS project:
 ```
-$ npm i --save-dev goodparts
+$ npm install goodparts --save-dev
 ```
-Then you can add the following script to your `package.json`:
+
+Then add the following script to your `package.json`:
+
 ```json
 {
   "lint": "node_modules/.bin/goodparts path/to/files/for/linting"
 }
 ```
-The `goodparts` command line tool supports `eslint`'s autofix flag `--fix`. Not all errors can be autofixed, but a great deal can, simply with:
+> Example: [hapi-auth-jwt2/**package.json**#L68](https://github.com/dwyl/hapi-auth-jwt2/blob/5e09733c71c679633de42baa22cef615cdc81859/package.json#L68)
+
+Now when you run the command:
+
+```sh
+npm run lint
+```
+You should _either_ see **no output** if there are **no linting issues** in the code:
+
+![goodparts-no-output-means-it-passes](https://cloud.githubusercontent.com/assets/194400/20865564/fa5307a0-ba0d-11e6-86ce-cbf57fb7bcf7.png)
+
+***or*** if there are **linting issues** in the code you should see:
+
+![goodparts-showing-linting-errors](https://cloud.githubusercontent.com/assets/194400/20865467/09054900-ba0b-11e6-8c4d-1a2ceeea99ae.png)
+
+
+### Autofix
+
+The `goodparts` command line tool supports `eslint`'s autofix flag `--fix`.
+Not _all_ errors can be autofixed, but a great deal can, simply with:
+
 ```
 $ node_modules/.bin/goodparts /path/to/dir --fix
 ```
-While we're working on an [atom plugin](https://github.com/dwyl/goodparts/issues/243), you can still use `goodparts` to lint your code in your editor using the `linter-eslint` plugin for atom. To do this, you need a `.eslintrc.js` file in your project that reflects the `goodparts` configuration. Luckily we have a command line option for this too! Simply run:
+Example: (_fixing the linting "errors" from the example above_)
+
+![goodparts-autofix](https://cloud.githubusercontent.com/assets/194400/20867636/446500fe-ba41-11e6-811b-3321824ec6b9.png)
+
+> Note: the `--fix` command only fixed the missing semicolon but did not
+delete the extra (_unused_) `auth` variable.
+
+
+### Text Editor Linting _Plugin_?
+
+> If this is a feature you _need_ please _tell_ us by "up-voting":
+[atom plugin feature request](https://github.com/dwyl/goodparts/issues/243)
+
+While we're working on an [atom plugin](https://github.com/dwyl/goodparts/issues/243),
+you can still use `goodparts` to lint your code in your editor using the
+`linter-eslint` plugin for atom. To do this, you need a `.eslintrc.js`
+file in your project that reflects the `goodparts` configuration.
+Luckily we have a command line option for this too!
+
+Simply run:
+
 ```
 $ node_modules/.bin/goodparts /path/to/dir --link
 ```
-This will create a symlink to the goodparts configuration file at `/path/to/dir/.eslintrc.js`, which we reccommend you git-ignore for now.
+This will create a `symlink` to the goodparts configuration file
+at `/path/to/dir/.eslintrc.js`, which we recommend you add it to `.gitignore` _for now_.
 
 **Pre Commit Hook**
 
@@ -90,6 +155,20 @@ Then, assuming you have added the `lint` script described above, add the followi
   "pre-commit": ["lint"]
 }
 ```
+
+## Repo Badge ? [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")
+
+
+If you use `goodparts` to lint your code and want to let other people know,
+you can add this badge in your repo:
+
+```js
+[![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")
+
+```
+
+> If you want to know more about "Badges" see: https://github.com/dwyl/repo-badges
+
 
 <br />
 
@@ -109,7 +188,12 @@ file, so you need to specify your environment e.g:
 
 ## Why (_extended version_)
 
-### Why Should Anyone _Listen_ to Douglas Crockford?
+We _strongly_ agree with the following sentiment/quote:
+
+> "_**constraints** can actually **boost creativity**_". [Martin Villeneuve](https://www.ted.com/talks/martin_villeneuve_how_i_made_an_impossible_film)
+
+
+### _Why_ Should Anyone _Listen_ to `Douglas Crockford`?
 
 There are *many* places you can go to learn JavaScript,
 *unsurprisingly* they *all* claim to teach you the "right way",
@@ -122,7 +206,8 @@ learning is any good is by listening to their their peers
 or failing that, "*gut feeling*", neither of which are
 a *reliable* measure of _quality_.
 
-Crockford is the Master Yoda of JavaScript, he has truly mastered the craft.  
+Crockford is the "[Yoda](https://youtu.be/7YkbgvRMpW0?t=55s)"
+of JavaScript, he has truly [_mastered_](https://en.wikipedia.org/wiki/Mastery_learning) the craft.  
 He is a member of "[**TC39**](http://tc39wiki.calculist.org/about/people/)"
 (the ECMAScript Technical Committee) responsible for
 setting the language _standard_ to be implemented by web browser makers;
@@ -234,36 +319,45 @@ https://www.nngroup.com/articles/legibility-readability-comprehension/
 
 <br />
 
-
-### _Should_ We Use ECMAScript 2015 (*AKA "ES6"*)?
-
-When you see someone _trying_ to use ***all*** the
-***latest features*** of **ECMAScript 2015**,
-its clear they are just trying to *look* smart to their peers
-and have not stopped to think/ask:
-+ "_will this code **work everywhere**_?"
-+ "_did the **users** ask me to use this (new) language feature_?
-(_or is there an existing way of doing this reliably...?_)"
-+ "_if I'm just going to transpile this through babel or add a pollyfill
-(for cross-browser compatibility) which means users have to load more bytes of code
-in their browser, what is true the advantage_...?"
-
-
-### Why does this matter / should I care?
+### Why does this matter / should I _care_?
 
 If you are lucky enough to be building an *internal* web app
 (*e.g: an intranet or "internal tools") and you "*know*" that
-everyone in the company is using Chrome that's *awesome*,
-thank your lucky stars and enjoy using all the latest & greatest features!
+_**everyone**_ in the company/organisation is using **"_Latest Chrome_"**
+that's *awesome*,
+thank your _lucky stars_ and enjoy using all the latest & greatest features of
+**ES6**!
 
 If, like us, you live in the "*real world*" and build applications/websites
-that need to be *accessible* by and work *consistently* on any device/browser,
-then using only the *goodparts* is a good idea.
+that need to be *accessible* by and work *consistently* on _any_ device/browser,
+then using only the ***`goodparts`*** is a good idea.
 
 > We are ***not suggesting*** that you (*your team/company*) *should*
 > (*explicitly*) ***support IE8*** running on Windows XP! (*heavens no!*)
 > Simply that there is an *easy* way to ensure that your code will work
 *everywhere* so you don't have to *think* about it.
+
+
+### ES2015?
+
+The 6th edition JavaScript, _officially_ known as "**ES6**" or **ECMAScript _2015_**, was finalized in June 2015.
+This update adds significant new syntax for writing complex applications, including classes and modules
+
+https://en.wikipedia.org/wiki/ECMAScript#6th_Edition_-_ECMAScript_2015
+
+#### _Should_ We Use ECMAScript 2015 (*AKA "ES6"*)?
+
+When you see someone _trying_ to use ***all*** the
+***latest features*** of **ECMAScript 2015**,
+<!-- its clear they are just trying to *look* smart to their piers
+and have not stopped to -->
+think/ask:
++ "_will this code **work everywhere**_?"
++ "_did the **users** ask me to use this (new) language feature_?
+(_or is there an `existing` way of doing this reliably...?_)"
++ "_if I'm just going to "**transpile**" this through babel or add a pollyfill
+(for cross-browser compatibility) which means users have to load more bytes of code
+in their browser (so pages take longer to load), what is true the advantage_...?"
 
 
 ### But caniuse.com says ...
@@ -297,7 +391,7 @@ please don't take their usage tables as "*gospel*" because they are flawed.
 
 ## Browser Stats *Facts*
 
-Most of us live in a *technology bubble*, we take it for granted
+Most of us live in a *technology bubble*, we take it for _granted_
 that we always have Wifi or 4G and assume that because many of our
 friends/colleagues are using MacBook Pros or iPhone 6s that
 *everyone* is in the same situation.
@@ -325,7 +419,10 @@ they cannot; which means we are *relying* on non-technical people to
 and had a person ask "*what is a browser*?" you will know that
 *might* take a while...  
 
+If you want to dive a bit deeper into the methodology used by StatCounter see:
+http://www.zdnet.com/article/net-market-share-vs-statcounter-whose-online-measurements-can-you-trust/
 
+<!-- Is this relevant...?
 ### Wikipedia as a *Representative* Sample of all Web Traffic
 
 If you want a *representative* sample of all internet users,
@@ -340,11 +437,7 @@ and does its data-collection server-side (*so users without JavaScript
 | Internet Explorer 9 | 1.28%   |
 | Total Legacy IE     | 4.24%   |
 
-
 > See:
 > https://stats.wikimedia.org/wikimedia/squids/SquidReportClients.htm  
 > https://analytics.wikimedia.org/dashboards/browsers/#all-sites-by-browser
-
-
-If you want to dive a bit deeper into the methodology used by StatCounter see:
-http://www.zdnet.com/article/net-market-share-vs-statcounter-whose-online-measurements-can-you-trust/
+-->

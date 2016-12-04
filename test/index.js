@@ -26,8 +26,8 @@ function ruleNotConfigured (rule) {
 }
 
 test('Testing All Conifgurable Rules', function (t) {
-  Object.keys(allRules).forEach(function (rule) {
-    var fCases, pCases;
+  Object.keys(allRules).forEach(function check_rule (rule) {
+    var fail_cases, pass_cases;
 
     if (ruleNotConfigured(rule)) {
       t.fail(rule + ' not configured');
@@ -41,17 +41,17 @@ test('Testing All Conifgurable Rules', function (t) {
       return;
     }
 
-    fCases = testObject[rule].fail;
-    pCases = testObject[rule].pass;
+    fail_cases = testObject[rule].fail;
+    pass_cases = testObject[rule].pass;
 
-    if (fCases) {
-      fCases.forEach(function (text) {
+    if (fail_cases) {
+      fail_cases.forEach(function (text) {
         t.notOk(passesRule(rule, text), rule + ' fails');
       });
     }
 
-    if (pCases) {
-      pCases.forEach(function (text) {
+    if (pass_cases) {
+      pass_cases.forEach(function (text) {
         t.ok(passesRule(rule, text), rule + ' passes');
       });
     }

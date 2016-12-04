@@ -9,6 +9,7 @@ module.exports = {
   'comma-style': [2, 'last'], // https://github.com/dwyl/goodparts/issues/215
   'comma-spacing': [2, { before: false, after: true }], // https://github.com/dwyl/goodparts/issues/214
   'comma-dangle': [2, 'never'], // https://github.com/dwyl/goodparts/issues/213
+  'capitalized-comments': 0, // https://github.com/dwyl/goodparts/issues/278
   'computed-property-spacing': [2, 'never'], // https://github.com/dwyl/goodparts/issues/212
   'consistent-this': 0, // https://github.com/dwyl/goodparts/issues/211
   'eol-last': 2, // https://github.com/dwyl/goodparts/issues/210
