@@ -1,7 +1,7 @@
 # `goodparts`
 
 An ESLint Plugin that _only_ allows **JavaScript the _Good_ Parts**  <br />
-(_and "**Better Parts**"_) in your code so you can _ship_ more reliable code.
+(_and "**Better Parts**"_) in your code so you can _ship more **reliable code**_.
 
 [![Travis](https://img.shields.io/travis/dwyl/goodparts.svg?maxAge=2592000)](https://travis-ci.org/dwyl/goodparts)
 [![dependencies Status](https://david-dm.org/dwyl/goodparts/status.svg)](https://david-dm.org/dwyl/goodparts)
@@ -90,29 +90,56 @@ Then add the following script to your `package.json`:
   "lint": "node_modules/.bin/goodparts path/to/files/for/linting"
 }
 ```
-> Example: ...
+> Example: [hapi-auth-jwt2/**package.json**#L68](https://github.com/dwyl/hapi-auth-jwt2/blob/5e09733c71c679633de42baa22cef615cdc81859/package.json#L68)
 
 Now when you run the command:
 
 ```sh
 npm run lint
 ```
-You should _either_ see
+You should _either_ see **no output** if there are **no linting issues** in the code:
 
-or you should see
+![goodparts-no-output-means-it-passes](https://cloud.githubusercontent.com/assets/194400/20865564/fa5307a0-ba0d-11e6-86ce-cbf57fb7bcf7.png)
+
+***or*** if there are **linting issues** in the code you should see:
+
+![goodparts-showing-linting-errors](https://cloud.githubusercontent.com/assets/194400/20865467/09054900-ba0b-11e6-8c4d-1a2ceeea99ae.png)
+
 
 ### Autofix
 
-The `goodparts` command line tool supports `eslint`'s autofix flag `--fix`. Not all errors can be autofixed, but a great deal can, simply with:
+The `goodparts` command line tool supports `eslint`'s autofix flag `--fix`.
+Not _all_ errors can be autofixed, but a great deal can, simply with:
 
 ```
 $ node_modules/.bin/goodparts /path/to/dir --fix
 ```
-While we're working on an [atom plugin](https://github.com/dwyl/goodparts/issues/243), you can still use `goodparts` to lint your code in your editor using the `linter-eslint` plugin for atom. To do this, you need a `.eslintrc.js` file in your project that reflects the `goodparts` configuration. Luckily we have a command line option for this too! Simply run:
+Example: (_fixing the linting "errors" from the example above_)
+
+![goodparts-autofix](https://cloud.githubusercontent.com/assets/194400/20867636/446500fe-ba41-11e6-811b-3321824ec6b9.png)
+
+> Note: the `--fix` command only fixed the missing semicolon but did not
+delete the extra (_unused_) `auth` variable.
+
+
+### Text Editor Linting _Plugin_?
+
+> If this is a feature you _need_ please _tell_ us by "up-voting":
+[atom plugin feature request](https://github.com/dwyl/goodparts/issues/243)
+
+While we're working on an [atom plugin](https://github.com/dwyl/goodparts/issues/243),
+you can still use `goodparts` to lint your code in your editor using the
+`linter-eslint` plugin for atom. To do this, you need a `.eslintrc.js`
+file in your project that reflects the `goodparts` configuration.
+Luckily we have a command line option for this too!
+
+Simply run:
+
 ```
 $ node_modules/.bin/goodparts /path/to/dir --link
 ```
-This will create a symlink to the goodparts configuration file at `/path/to/dir/.eslintrc.js`, which we reccommend you git-ignore for now.
+This will create a `symlink` to the goodparts configuration file
+at `/path/to/dir/.eslintrc.js`, which we recommend you add it to `.gitignore` _for now_.
 
 **Pre Commit Hook**
 
