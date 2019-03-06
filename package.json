@@ -14,12 +14,12 @@
   "homepage": "https://github.com/dwyl/goodparts#readme",
   "scripts": {
     "test": "tape test/index.js test/**/*.test.js",
-    "coverage": "istanbul cover tape test/index.js test/**/*.test.js",
+    "coverage": "nyc report npm test",
     "lint": "bin/cmd.js .",
     "lint:fix": "bin/cmd.js . --fix"
   },
   "devDependencies": {
-    "istanbul": "^0.4.5",
+    "nyc": "^13.3.0",
     "tape": "^4.6.0"
   },
   "dependencies": {
