@@ -13,7 +13,7 @@ An ESLint Plugin that _only_ allows **JavaScript the _Good_ Parts**  <br />
 
 ## *Why?*
 
-Using JavaScript "**The _Good_ Parts**" (_abreviated to **`"goodparts"`**_)
+Using JavaScript "**The _Good_ Parts**" (_abbreviated to **`"goodparts"`**_)
 is the _best_ way we know <br />
 how to write _simple_, _consistent_,
 _predictable_ and 100% cross-browser-compatible JavaScript code.
