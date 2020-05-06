@@ -25,6 +25,22 @@ function ruleNotConfigured (rule) {
   return typeof ourRules[rule] === 'undefined';
 }
 
+function deprecatedRule (rule) {
+  return typeof allRules[rule] === 'undefined';
+}
+
+
+test('Testing for deprecated rules', function (t) {
+  Object.keys(ourRules).forEach(function check_deprecated_rule (rule) {
+    if (deprecatedRule(rule)) {
+      t.fail(rule + ' deprecated');
+    }
+
+  });
+  
+  t.end();
+});
+
 test('Testing All Conifgurable Rules', function (t) {
   Object.keys(allRules).forEach(function check_rule (rule) {
     var fail_cases, pass_cases;
