@@ -35,9 +35,7 @@ test('Testing for deprecated rules', function (t) {
     if (deprecatedRule(rule)) {
       t.fail(rule + ' deprecated');
     }
-
   });
-  
   t.end();
 });
 
