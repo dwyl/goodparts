@@ -66,5 +66,13 @@ module.exports = {
   'no-warning-comments': 'off', // https://github.com/dwyl/goodparts/issues/117
   'radix': ['error', 'always'], // https://github.com/dwyl/goodparts/issues/118
   'wrap-iife': ['error', 'inside'], // https://github.com/dwyl/goodparts/issues/124
-  'no-useless-return': 'error' // https://github.com/dwyl/goodparts/issues/261
+  'no-useless-return': 'error', // https://github.com/dwyl/goodparts/issues/261
+  'default-param-last': 'off',
+  'grouped-accessor-pairs': ['error', 'getBeforeSet'],
+  'max-classes-per-file': 'off',
+  'no-constructor-return': 'off',
+  'no-useless-catch': 'error',
+  'prefer-promise-reject-errors': 'off',
+  'prefer-regex-literals': 'off',
+  'require-unicode-regexp': 'off'
 };

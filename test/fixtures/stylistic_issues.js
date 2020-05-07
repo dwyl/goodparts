@@ -116,7 +116,6 @@ module.exports = {
       'var x = function () {\n};'
     ]
   },
-  'require-jsdoc': { pass: ['function foo () {};'] },
   'lines-around-comment': null,
   'linebreak-style': {
     fail: ['var a = "a";\r\n'],
@@ -279,16 +278,6 @@ module.exports = {
     fail: [read('./max-depth.fail')],
     pass: [read('./max-depth.pass')]
   },
-  'lines-around-directive': {
-    fail: [
-      read('./lines-around-directive.fail0'),
-      read('./lines-around-directive.fail0')
-    ],
-    pass: [
-      read('./lines-around-directive.pass0'),
-      read('./lines-around-directive.pass1')
-    ]
-  },
   'keyword-spacing': {
     fail: ['if(true){};'],
     pass: ['if (true) {};']
@@ -300,5 +289,24 @@ module.exports = {
   'func-name-matching': {
     fail: ['var bar = function foo () {return 42;};'],
     pass: ['var bar = function bar () {return 42;};']
-  }
+  },
+  'array-bracket-newline': null,
+  'array-element-newline': null,
+  'function-call-argument-newline': null,
+  'function-paren-newline': null,
+  'implicit-arrow-linebreak': null,
+  'lines-between-class-members': null,
+  'max-lines-per-function': null,
+  'multiline-comment-style': null,
+  'no-buffer-constructor': null,
+  'no-multi-assign': null,
+  'nonblock-statement-body-position': null,
+  'padding-line-between-statements': null,
+  'prefer-destructuring': null,
+  'prefer-exponentiation-operator': null,
+  'prefer-named-capture-group': null,
+  'prefer-object-spread': null,
+  'template-tag-spacing': null,
+  'switch-colon-spacing': null,
+  'semi-style': null
 };

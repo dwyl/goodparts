@@ -1,15 +1,6 @@
 'use strict';
 
 module.exports = {
-  'valid-jsdoc': [
-    2, {
-      prefer: {
-        arg: 'param',
-        argument: 'param',
-        return: 'returns'
-      }
-    }
-  ], // https://github.com/dwyl/goodparts/issues/56
   'no-irregular-whitespace': [2, {
     skipStrings: true,
     skipComments: true,
@@ -43,5 +34,15 @@ module.exports = {
   'no-unreachable': 2, // https://github.com/dwyl/goodparts/issues/240
   'use-isnan': 2, // https://github.com/dwyl/goodparts/issues/48
   'valid-typeof': [2, { requireStringLiterals: true }], // https://github.com/dwyl/goodparts/issues/52
-  'no-regex-spaces': 2 // http://eslint.org/docs/rules/
+  'no-regex-spaces': 2, // http://eslint.org/docs/rules/
+  'for-direction': 2,
+  'getter-return': 2,
+  'no-async-promise-executor': 0,
+  'no-await-in-loop': 0,
+  'no-compare-neg-zero': 2,
+  'no-dupe-else-if': 2,
+  'no-import-assign': 2,
+  'no-misleading-character-class': 0,
+  'no-setter-return': 2,
+  'require-atomic-updates': 0
 };

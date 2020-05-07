@@ -254,5 +254,22 @@ module.exports = {
   'no-useless-return': {
     fail: [read('./no-useless-return.fail')],
     pass: [read('./no-useless-return.pass')]
-  }
+  },
+  'default-param-last': null,
+  'getter-return': {
+    fail: [read('./getter-return.fail')],
+    pass: [read('./getter-return.pass')]
+  },
+  'grouped-accessor-pairs': {
+    fail: [read('./grouped-accessor-pairs.fail')],
+    pass: [read('./grouped-accessor-pairs.pass')]
+  },
+  'max-classes-per-file': null,
+  'no-constructor-return': null,
+  'no-useless-catch': {
+    fail: [read('./no-useless-catch.fail')],
+  },
+  'prefer-promise-reject-errors': null,
+  'prefer-regex-literals': null,
+  'require-unicode-regexp': null
 };
