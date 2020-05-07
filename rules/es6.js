@@ -23,7 +23,6 @@ module.exports = {
   'prefer-arrow-callback': 'off',
   'prefer-const': 'off',
   'prefer-numeric-literals': 'off',
-  'prefer-reflect': 'off',
   'prefer-rest-params': 'off',
   'prefer-spread': 'off',
   'prefer-template': 'off',
@@ -33,5 +32,5 @@ module.exports = {
   'sort-imports': 'off',
   'symbol-description': 'off',
   'template-curly-spacing': 'off',
-  'yield-star-spacing': 'off'
+  'yield-star-spacing': 'off',
 };

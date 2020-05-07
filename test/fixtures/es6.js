@@ -23,7 +23,6 @@ module.exports = {
   'prefer-arrow-callback': null,
   'prefer-const': null,
   'prefer-numeric-literals': null,
-  'prefer-reflect': null,
   'prefer-rest-params': null,
   'prefer-spread': null,
   'prefer-template': null,

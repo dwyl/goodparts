@@ -3,15 +3,6 @@
 var read = require('../read.js');
 
 module.exports = {
-  'valid-jsdoc': {
-    fail: [
-      read('./valid-jsdoc.fail')
-    ],
-    pass: [
-      read('./valid-jsdoc.pass')
-    ]
-  },
-
   'no-irregular-whitespace': { fail: [
     read('./no-irregular-whitespace.fail')
   ] },
@@ -75,5 +66,19 @@ module.exports = {
     'function foo () {return 1; console.log(3);}'
   ] },
   'use-isnan': { fail: ['if (NaN == x) { x = 0; }'] },
-  'valid-typeof': { fail: ['var x; if (typeof x == "jack") { x = "OMG"} '] }
+  'valid-typeof': { fail: ['var x; if (typeof x == "jack") { x = "OMG"} '] },
+  'for-direction': {fail: [
+    'for (var i = 0; i < 10; i--){}',
+    'for (var i = 10; i >= 0; i++){}'
+  ], pass: ['for (var i = 0; i < 10; i++){}']},
+  'no-async-promise-executor': null,
+  'no-await-in-loop': null,
+  'no-compare-neg-zero': {fail: [
+    'x === -0'
+  ], pass: ['x === 0']},
+  'no-dupe-else-if': {fail: [read('./no-dupe-else-if.fail')]},
+  'no-import-assign': {fail: [read('./no-import-assign.fail')]},
+  'no-misleading-character-class': null,
+  'no-setter-return': {fail: [read('./no-setter-return.fail')]},
+  'require-atomic-updates': null
 };
