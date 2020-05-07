@@ -18,10 +18,6 @@ module.exports = {
     fail: ['var x = 1;'],
     pass: ['var x = 1; console.log(x);']
   },
-  // 'no-catch-shadow': {
-  //   fail: ['var err = "x";\n\ntry {\n  throw "problem";\n} catch (err) {\n\n}'],
-  //   pass: ['var err = "x";\n\ntry {\n  throw "problem";\n} catch (e) {\n\n}']
-  // },
   'no-delete-var': {
     fail: ['var x;\ndelete x;'],
     pass: ['var x;']

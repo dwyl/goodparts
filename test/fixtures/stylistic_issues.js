@@ -278,16 +278,6 @@ module.exports = {
     fail: [read('./max-depth.fail')],
     pass: [read('./max-depth.pass')]
   },
-  // 'lines-around-directive': {
-  //   fail: [
-  //     read('./lines-around-directive.fail0'),
-  //     read('./lines-around-directive.fail0')
-  //   ],
-  //   pass: [
-  //     read('./lines-around-directive.pass0'),
-  //     read('./lines-around-directive.pass1')
-  //   ]
-  // },
   'keyword-spacing': {
     fail: ['if(true){};'],
     pass: ['if (true) {};']
