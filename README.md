@@ -22,7 +22,7 @@ The ***guiding principal*** of `goodparts` is:
 
 > "***perfection*** *is* ***attained*** *not when there is nothing more to add,  
 > but when there is* ***nothing more to remove***" ~
-[Antoine de Saint-Exupéry](http://en.wikiquote.org/wiki/Antoine_de_Saint_Exup%C3%A9ry#Quotes)
+[Antoine de Saint-Exupéry](https://en.wikiquote.org/wiki/Antoine_de_Saint_Exup%C3%A9ry#Quotes)
 
 We _agree_ that "_code is for **humans** to read_":
 
@@ -42,7 +42,7 @@ how its been written.
 2. [***Portability***](https://en.wikipedia.org/wiki/Software_portability) -
 "Old" Browsers/Devices are a _fact_, even if it's "*only a small percentage*"
 of people, we _chose_ to
-[*empathize*](http://www.merriam-webster.com/dictionary/empathize)
+[*empathize*](https://www.merriam-webster.com/dictionary/empathize)
 with them by writing code that ***Works Everywhere***<sup>TM</sup>.
 3. ***Beginner-friendlyness*** or [***Shoshin***](https://en.wikipedia.org/wiki/Shoshin) - using _fewer_ JS features
 also means a _complete_ beginner has _less_ to learn before
@@ -62,7 +62,7 @@ your code ***works everywhere***. (_or your money back!_)
 
 > If you are _unfamiliar_ with JavaScript "**The _Good_ Parts**"
 or need a _refresher_, <br />
-please see @iteles' notes: [github.com/iteles/Javascript-the-**_Good_**-**Parts**-_**notes**_](https://github.com/iteles/Javascript-the-Good-Parts-notes)
+please see @iteles' notes: [github.com/iteles/Javascript-the-**_Good_**-**Parts**-_**notes**_](https://github.com/dwyl/Javascript-the-Good-Parts-notes)
 
 There are _several_ videos where Douglas Crockford covers
 the Why? What? and How? <br />
@@ -74,7 +74,7 @@ see: https://github.com/dwyl/goodparts/#videos
 
 ESLint is a Linting tool started by Nicholas C. Zakas,
 it has become the _defacto_ linter in the JS community. see:
-http://eslint.org/docs/about/
+https://eslint.org/docs/about/
 -->
 
 ## *How?*
@@ -208,7 +208,7 @@ a *reliable* measure of _quality_.
 
 Crockford is the "[Yoda](https://youtu.be/7YkbgvRMpW0?t=55s)"
 of JavaScript, he has truly [_mastered_](https://en.wikipedia.org/wiki/Mastery_learning) the craft.  
-He is a member of "[**TC39**](http://tc39wiki.calculist.org/about/people/)"
+He is a member of "[**TC39**](https://tc39wiki.calculist.org/about/people/)"
 (the ECMAScript Technical Committee) responsible for
 setting the language _standard_ to be implemented by web browser makers;
 to say that DC "*knows*" JavaScript inside-out is an *understatement*.
@@ -222,7 +222,7 @@ a *subset* of the language that can be *trusted* and
 He has been **lead engineer** at Yahoo and **Paypal** and run his own
 web consulting company specialising in JS applications.
 
-Most people will not look at http://javascript.crockford.com
+Most people will not look at https://javascript.crockford.com
 and think: "*yes, this looks like the place to learn
 JavaScript...*" and that's a *shame* because its "*plainness*"
 (*lack of pictures or medium-style presentation*) does not do _justice_ to
@@ -313,7 +313,7 @@ https://www.youtube.com/playlist?list=PLEzQf147-uEpvTa1bHDNlxUL2klHUMHJu
 + Comparison of JS Linting Tools:
 https://www.sitepoint.com/comparison-javascript-linting-tools/
 + The Sorry Legacy of Internet Explorer:
-http://www.wired.com/2016/01/the-sorry-legacy-of-microsoft-internet-explorer/
+https://www.wired.com/2016/01/the-sorry-legacy-of-microsoft-internet-explorer/
 + Readability:
 https://www.nngroup.com/articles/legibility-readability-comprehension/
 
@@ -366,7 +366,7 @@ Caniuse.com is a *fantastic* website. The UI is brilliant and for "*informal*"
 (*i.e. non-scientific*) discussions about which HTML5 features are available
 in a browser, we use it often! But caniuse.com bases it's pretty
 graphs on the data from
-[statcounter.com](http://gs.statcounter.com/about) which is *good*
+[statcounter.com](https://gs.statcounter.com/about) which is *good*
 but has *several* ***flaws in data collection methodology***:
 
 1. ***Small sample size*** - StatCounter collects data for a  
@@ -383,7 +383,7 @@ representation in the sample.
 By contrast NetMarketShare only counts the *first* pageview
 which means it gives an _**equal weighting to each visitor**_.
 
-<sup>1</sup>According to [netcraft.com](http://news.netcraft.com/)
+<sup>1</sup>According to [netcraft.com](https://news.netcraft.com/)
 there are over a ***billion*** (*active*) websites online in May 2016.
 It is *unclear* which websites StatCounter is sourcing its data from,
 please don't take their usage tables as "*gospel*" because they are flawed.
@@ -420,7 +420,7 @@ and had a person ask "*what is a browser*?" you will know that
 *might* take a while...  
 
 If you want to dive a bit deeper into the methodology used by StatCounter see:
-http://www.zdnet.com/article/net-market-share-vs-statcounter-whose-online-measurements-can-you-trust/
+https://www.zdnet.com/article/net-market-share-vs-statcounter-whose-online-measurements-can-you-trust/
 
 <!-- Is this relevant...?
 ### Wikipedia as a *Representative* Sample of all Web Traffic
