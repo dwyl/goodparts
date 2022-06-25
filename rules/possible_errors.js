@@ -34,7 +34,7 @@ module.exports = {
   'no-unreachable': 2, // https://github.com/dwyl/goodparts/issues/240
   'use-isnan': 2, // https://github.com/dwyl/goodparts/issues/48
   'valid-typeof': [2, { requireStringLiterals: true }], // https://github.com/dwyl/goodparts/issues/52
-  'no-regex-spaces': 2, // http://eslint.org/docs/rules/
+  'no-regex-spaces': 2, // https://eslint.org/docs/rules/
   'for-direction': 2,
   'getter-return': 2,
   'no-async-promise-executor': 0,

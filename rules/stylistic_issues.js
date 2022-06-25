@@ -52,7 +52,7 @@ module.exports = {
   }], // https://github.com/dwyl/goodparts/issues/36
   'space-before-blocks': [2, { functions: 'always', keywords: 'always' }], // https://github.com/dwyl/goodparts/issues/37
   'semi': [2, 'always', { omitLastInOneLineBlock: true }], // https://github.com/dwyl/goodparts/issues/49
-  'operator-linebreak': [2, 'before'], // http://eslint.org/docs/rules/operator-linebreak
+  'operator-linebreak': [2, 'before'], // https://eslint.org/docs/rules/operator-linebreak
   'operator-assignment': [2, 'always'], // https://github.com/dwyl/goodparts/issues/76
   'one-var-declaration-per-line': 0,
   'one-var': [2, { initialized: 'never', uninitialized: 'always' }],
